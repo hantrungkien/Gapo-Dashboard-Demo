@@ -1,5 +1,6 @@
 package com.kienht.gapo.dashboard.data.repository.source.remote.model
 
+import com.kienht.gapo.dashboard.domain.usecase.news.model.Post
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -21,4 +22,18 @@ data class PostDTOModel(
     @Json(name = "likeCount") val likeCount: String,
     @Json(name = "commentCount") val commentCount: String,
     @Json(name = "shareCount") val shareCount: String
+)
+
+internal fun PostDTOModel?.mapToDomain() = if (this == null) null else Post(
+    id,
+    Post.Type.get(type),
+    username,
+    userAvatar,
+    time,
+    content,
+    images,
+    video,
+    likeCount,
+    commentCount,
+    shareCount
 )

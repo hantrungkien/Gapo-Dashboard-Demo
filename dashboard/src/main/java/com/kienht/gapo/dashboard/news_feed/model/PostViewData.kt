@@ -1,6 +1,7 @@
 package com.kienht.gapo.dashboard.news_feed.model
 
 import android.os.Parcelable
+import com.kienht.gapo.dashboard.domain.usecase.news.model.Post
 import kotlinx.android.parcel.Parcelize
 
 /**
@@ -11,7 +12,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class PostViewData(
     val id: Long,
-    val type: Type,
+    val type: Post.Type,
     val username: String,
     val userAvatar: String,
     val time: String,
@@ -25,19 +26,18 @@ data class PostViewData(
 
     val firstImage: String
         get() = images?.first() ?: ""
-
-    enum class Type {
-
-        TEXT {
-            override fun value(): String = "TEXT"
-        },
-        IMAGE {
-            override fun value(): String = "IMAGE"
-        },
-        VIDEO {
-            override fun value(): String = "VIDEO"
-        };
-
-        abstract fun value(): String
-    }
 }
+
+internal fun Post?.mapToViewData() = if (this == null) null else PostViewData(
+    id,
+    type,
+    username,
+    userAvatar,
+    time,
+    content,
+    images,
+    video,
+    likeCount,
+    commentCount,
+    shareCount
+)

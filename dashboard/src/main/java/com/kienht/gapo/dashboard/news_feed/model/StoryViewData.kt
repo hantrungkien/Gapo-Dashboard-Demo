@@ -2,6 +2,7 @@ package com.kienht.gapo.dashboard.news_feed.model
 
 import android.os.Parcelable
 import androidx.recyclerview.widget.DiffUtil
+import com.kienht.gapo.dashboard.domain.usecase.news.model.Story
 import kotlinx.android.parcel.Parcelize
 
 /**
@@ -33,3 +34,6 @@ data class StoryViewData(
         }
     }
 }
+
+internal fun Story.mapToViewData() = StoryViewData(id, username, userAvatar, contentUrl)
+internal fun List<Story>?.mapToViewData() = this?.map { it.mapToViewData() }

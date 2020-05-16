@@ -3,6 +3,7 @@ package com.kienht.gapo.dashboard.news_feed.model
 import android.os.Parcelable
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.DiffUtil
+import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeed
 import kotlinx.android.parcel.Parcelize
 
 /**
@@ -29,26 +30,11 @@ class NewsFeedsLiveData(posts: List<NewsFeedViewData>) :
 @Parcelize
 data class NewsFeedViewData(
     val id: Long,
-    val type: Type,
+    val type: NewsFeed.Type,
     val stories: List<StoryViewData>?,
     val post: PostViewData?,
     val friendRequests: List<FriendRequestViewData>?
 ) : Parcelable {
-
-    enum class Type {
-
-        STORY {
-            override fun value(): String = "STORY"
-        },
-        POST {
-            override fun value(): String = "POST"
-        },
-        FRIEND_REQUEST {
-            override fun value(): String = "FRIEND_REQUEST"
-        };
-
-        abstract fun value(): String
-    }
 
     object DiffItemCallback : DiffUtil.ItemCallback<NewsFeedViewData>() {
         override fun areItemsTheSame(
@@ -66,3 +52,9 @@ data class NewsFeedViewData(
         }
     }
 }
+
+internal fun NewsFeed.mapToViewData() = NewsFeedViewData(
+    id, type, stories.mapToViewData(), post.mapToViewData(), friendRequests.mapToViewData()
+)
+
+internal fun List<NewsFeed>.mapToViewData() = this.map { it.mapToViewData() }

@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.kienht.gapo.dashboard.R
+import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeed
+import com.kienht.gapo.dashboard.domain.usecase.news.model.Post
 import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.post_text.PostTextViewHolder
 import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.NewsFeedBaseViewHolder
 import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.post_image.PostImageViewHolder
@@ -111,20 +113,20 @@ class NewsFeedAdapter(
     override fun getItemViewType(position: Int): Int {
         val item = getItem(position)
         return when (item.type) {
-            NewsFeedViewData.Type.STORY -> R.layout.news_feed_stories_item
-            NewsFeedViewData.Type.POST -> when (item.post?.type) {
-                PostViewData.Type.TEXT -> {
+            NewsFeed.Type.STORY -> R.layout.news_feed_stories_item
+            NewsFeed.Type.POST -> when (item.post?.type) {
+                Post.Type.TEXT -> {
                     R.layout.news_feed_post_text_item
                 }
-                PostViewData.Type.IMAGE -> {
+                Post.Type.IMAGE -> {
                     R.layout.news_feed_post_image_item
                 }
-                PostViewData.Type.VIDEO -> {
+                Post.Type.VIDEO -> {
                     R.layout.news_feed_post_video_item
                 }
                 else -> throw IllegalArgumentException()
             }
-            NewsFeedViewData.Type.FRIEND_REQUEST -> R.layout.news_feed_friend_requests_item
+            NewsFeed.Type.FRIEND_REQUEST -> R.layout.news_feed_friend_requests_item
         }
     }
 

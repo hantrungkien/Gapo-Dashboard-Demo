@@ -1,5 +1,6 @@
 package com.kienht.gapo.dashboard.data.repository.source.remote.model
 
+import com.kienht.gapo.dashboard.domain.usecase.news.model.FriendRequest
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -15,3 +16,10 @@ data class FriendRequestDTOModel(
     @Json(name = "friendAvatar") val friendAvatar: String,
     @Json(name = "mutualFriendsCount") val mutualFriendsCount: Int
 )
+
+internal fun FriendRequestDTOModel.mapToDomain() = FriendRequest(
+    id, friendName, friendAvatar, mutualFriendsCount
+)
+
+internal fun List<FriendRequestDTOModel>?.mapToDomain() =
+    this?.map { it.mapToDomain() }

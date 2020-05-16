@@ -7,7 +7,7 @@ package com.kienht.gapo.dashboard.domain.usecase.news.model
  */
 data class Post(
     val id: Long,
-    val type: String,
+    val type: Type,
     val username: String,
     val userAvatar: String,
     val time: String,
@@ -17,4 +17,24 @@ data class Post(
     val likeCount: String,
     val commentCount: String,
     val shareCount: String
-)
+){
+
+    enum class Type {
+
+        TEXT {
+            override fun value(): String = "TEXT"
+        },
+        IMAGE {
+            override fun value(): String = "IMAGE"
+        },
+        VIDEO {
+            override fun value(): String = "VIDEO"
+        };
+
+        abstract fun value(): String
+
+        companion object {
+            fun get(value: String) = values().first { it.value().equals(value, true) }
+        }
+    }
+}

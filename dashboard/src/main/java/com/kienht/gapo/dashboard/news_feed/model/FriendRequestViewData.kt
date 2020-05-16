@@ -2,6 +2,7 @@ package com.kienht.gapo.dashboard.news_feed.model
 
 import android.os.Parcelable
 import androidx.recyclerview.widget.DiffUtil
+import com.kienht.gapo.dashboard.domain.usecase.news.model.FriendRequest
 import kotlinx.android.parcel.Parcelize
 
 /**
@@ -33,3 +34,8 @@ data class FriendRequestViewData(
         }
     }
 }
+
+internal fun FriendRequest.mapToViewData() =
+    FriendRequestViewData(id, friendName, friendAvatar, mutualFriendsCount)
+
+internal fun List<FriendRequest>?.mapToViewData() = this?.map { it.mapToViewData() }

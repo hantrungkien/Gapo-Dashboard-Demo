@@ -11,9 +11,9 @@ import retrofit2.http.GET
 internal interface DashboardApiService {
 
     companion object {
-        const val BASE_URL = "https://api.gapo.vn/v1/rest/"
+        const val BASE_URL = "https://raw.githubusercontent.com/hantrungkien/Gapo-Dashboard-Demo/"
     }
 
-    @GET("auth/login")
+    @GET("master/news_feed.json")
     suspend fun fetchNewsFeedData(): FetchNewsFeedResponse
 }

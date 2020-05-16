@@ -2,6 +2,8 @@ package com.kienht.gapo.dashboard.data.repository
 
 import com.kienht.gapo.dashboard.data.repository.source.cache.DashboardCache
 import com.kienht.gapo.dashboard.data.repository.source.remote.DashboardRemote
+import com.kienht.gapo.dashboard.data.repository.source.remote.model.mapToDomain
+import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeed
 import com.kienht.gapo.dashboard.domain.usecase.news.repository.DashboardRepository
 
 /**
@@ -30,5 +32,9 @@ internal class DashboardRepositoryImpl(
                 ).also { INSTANCE = it }
             }
         }
+    }
+
+    override suspend fun fetchNewsFeeds(): List<NewsFeed> {
+        return dashboardRemote.fetchNewsFeeds().mapToDomain()
     }
 }
