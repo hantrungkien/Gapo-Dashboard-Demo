@@ -19,7 +19,7 @@ class NewsFeedViewModel @Inject constructor(
 ) : ViewModel() {
 
     val myAvatarUrl: String =
-        "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/88970319_2805039096243451_3784099829701935104_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQlN0nHIq3zK8_R7fKmssVeXuY9gO5QKVKDpK0bIJXLthOxqsr65Mr7gdrYQa5KgwG8&_nc_ht=scontent.fhan2-2.fna&oh=509bd66f0b376446b79a3072d5cb04af&oe=5EE65222"
+        "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/xuan_lan.jpg"
 
     private val action = MutableLiveData<Unit?>()
 
