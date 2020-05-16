@@ -2,6 +2,9 @@
 
 package com.kienht.gapo.core.utils
 
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
+import com.kienht.gapo.core.base.GlideApp
 import kotlin.collections.ArrayList
 
 /**
@@ -18,4 +21,10 @@ inline val <reified T : Any> T.TAG: String
 
 fun <T> Collection<T>.toArrayList(): ArrayList<T> {
     return ArrayList(this)
+}
+
+fun ImageView.glideClear() {
+    if ((context as? AppCompatActivity)?.isDestroyed == true) return
+    GlideApp.with(this).clear(this)
+    setImageDrawable(null)
 }

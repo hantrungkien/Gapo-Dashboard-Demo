@@ -1,5 +1,6 @@
 package com.kienht.gapo.dashboard.data.repository.source.remote
 
+import com.kienht.gapo.dashboard.data.repository.source.remote.api.DashboardApiService
 import javax.inject.Inject
 
 /**
@@ -7,5 +8,7 @@ import javax.inject.Inject
  * @company OICSoft
  * @since 14/05/2020
  */
-class DashboardRemoteImpl @Inject constructor(): DashboardRemote {
+internal class DashboardRemoteImpl @Inject constructor(
+    private val dashboardApiService: DashboardApiService
+) : DashboardRemote {
 }

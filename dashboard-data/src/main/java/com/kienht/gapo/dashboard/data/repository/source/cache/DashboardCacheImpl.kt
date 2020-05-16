@@ -1,5 +1,6 @@
 package com.kienht.gapo.dashboard.data.repository.source.cache
 
+import android.content.SharedPreferences
 import javax.inject.Inject
 
 /**
@@ -7,5 +8,7 @@ import javax.inject.Inject
  * @company OICSoft
  * @since 14/05/2020
  */
-class DashboardCacheImpl @Inject constructor(): DashboardCache {
+class DashboardCacheImpl @Inject constructor(
+    private val prefs: SharedPreferences
+) : DashboardCache {
 }

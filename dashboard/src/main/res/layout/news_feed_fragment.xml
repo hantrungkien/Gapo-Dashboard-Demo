@@ -23,181 +23,178 @@
             android:layout_height="wrap_content"
             android:background="@android:color/white">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_scrollFlags="scroll">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/image_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/_20dp"
                     android:layout_marginTop="@dimen/_20dp"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:placeHolder="@{@drawable/dashboard_logo}"
+                    app:scaleType="@{ScaleType.FIT_CENTER}"
+                    tools:scaleType="fitCenter"
+                    tools:src="@drawable/dashboard_logo" />
+
+                <ImageButton
+                    android:id="@+id/button_search"
+                    android:layout_width="@dimen/_40dp"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:layout_toStartOf="@+id/button_message"
+                    android:background="@drawable/bg_circle_mischk"
+                    android:padding="@dimen/_5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_search_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/image_logo"
+                    app:layout_constraintEnd_toStartOf="@+id/button_message"
+                    app:layout_constraintTop_toTopOf="@+id/image_logo" />
+
+                <ImageButton
+                    android:id="@+id/button_message"
+                    android:layout_width="@dimen/_40dp"
+                    android:layout_height="@dimen/_40dp"
                     android:layout_marginEnd="@dimen/_20dp"
-                    android:layout_marginBottom="@dimen/_10dp">
+                    android:background="@drawable/bg_circle_mischk"
+                    android:padding="@dimen/_8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_message_black_24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/image_logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/image_logo" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/_30dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:adjustViewBounds="true"
-                        app:placeHolder="@{@drawable/dashboard_logo}"
-                        app:scaleType="@{ScaleType.FIT_CENTER}"
-                        tools:scaleType="fitCenter"
-                        tools:src="@drawable/dashboard_logo" />
-
-                    <ImageButton
-                        android:id="@+id/button_search"
-                        android:layout_width="@dimen/_40dp"
-                        android:layout_height="@dimen/_40dp"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="@dimen/_10dp"
-                        android:layout_toStartOf="@+id/button_message"
-                        android:background="@drawable/bg_circle_mischk"
-                        android:padding="@dimen/_5dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/ic_search_black_24dp" />
-
-                    <ImageButton
-                        android:id="@+id/button_message"
-                        android:layout_width="@dimen/_40dp"
-                        android:layout_height="@dimen/_40dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:background="@drawable/bg_circle_mischk"
-                        android:padding="@dimen/_8dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/ic_message_black_24dp" />
-
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_20dp"
+                <ImageView
+                    android:id="@+id/image_avatar"
+                    android:layout_width="@dimen/_50dp"
+                    android:layout_height="@dimen/_50dp"
                     android:layout_marginTop="@dimen/_15dp"
-                    android:layout_marginEnd="@dimen/_20dp"
-                    android:layout_marginBottom="@dimen/_15dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    app:isCircle="@{true}"
+                    app:layout_constraintStart_toStartOf="@+id/image_logo"
+                    app:layout_constraintTop_toBottomOf="@+id/button_message"
+                    app:placeHolder="@{@drawable/ic_account_circle_gray_chateau_100dp}"
+                    app:url="@{viewModel.myAvatarUrl}"
+                    tools:src="@drawable/ic_account_circle_gray_chateau_100dp" />
 
-                    <ImageView
-                        android:layout_width="@dimen/_50dp"
-                        android:layout_height="@dimen/_50dp"
-                        app:isCircle="@{true}"
-                        app:placeHolder="@{@drawable/ic_account_circle_gray_chateau_100dp}"
-                        app:url="@{viewModel.myAvatarUrl}"
-                        tools:src="@drawable/ic_account_circle_gray_chateau_100dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10dp"
-                        android:text="What's on your mind?"
-                        android:textColor="@android:color/black"
-                        android:textSize="@dimen/_16sp" />
-
-                </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:text="What's on your mind?"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/image_avatar"
+                    app:layout_constraintEnd_toEndOf="@+id/button_message"
+                    app:layout_constraintStart_toEndOf="@+id/image_avatar"
+                    app:layout_constraintTop_toTopOf="@+id/image_avatar" />
 
                 <View
+                    android:id="@+id/view_line_horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp"
-                    android:background="@android:color/darker_gray" />
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/image_avatar" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_live"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_5dp"
-                    android:layout_marginBottom="@dimen/_5dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10dp"
+                    android:background="@android:color/transparent"
+                    android:text="Live"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sp"
+                    app:icon="@drawable/ic_live_tv_red_24dp"
+                    app:iconGravity="start"
+                    app:iconPadding="0dp"
+                    app:iconTint="#f00"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/view_line_vertical1"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_line_horizontal" />
 
-                    <FrameLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
+                <View
+                    android:id="@+id/view_line_vertical1"
+                    android:layout_width="0.5dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:layout_marginBottom="@dimen/_15dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/button_photo"
+                    app:layout_constraintStart_toEndOf="@+id/button_live"
+                    app:layout_constraintTop_toBottomOf="@+id/view_line_horizontal" />
 
-                        <com.google.android.material.button.MaterialButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:background="@android:color/transparent"
-                            android:singleLine="true"
-                            android:text="Live"
-                            android:textAllCaps="false"
-                            android:textColor="@android:color/black"
-                            android:textSize="@dimen/_10sp"
-                            app:icon="@drawable/ic_live_tv_red_24dp"
-                            app:iconGravity="start"
-                            app:iconPadding="@dimen/_10dp"
-                            app:iconTint="#f00" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_photo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10dp"
+                    android:background="@android:color/transparent"
+                    android:text="Photo"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sp"
+                    app:icon="@drawable/ic_photo_album_green_24dp"
+                    app:iconGravity="start"
+                    app:iconPadding="0dp"
+                    app:iconTint="#3AB350"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/view_line_vertical2"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@+id/view_line_vertical1"
+                    app:layout_constraintTop_toBottomOf="@+id/view_line_horizontal" />
 
-                    </FrameLayout>
+                <View
+                    android:id="@+id/view_line_vertical2"
+                    android:layout_width="0.5dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:layout_marginBottom="@dimen/_15dp"
+                    android:background="@android:color/darker_gray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/button_check_in"
+                    app:layout_constraintStart_toEndOf="@+id/button_photo"
+                    app:layout_constraintTop_toBottomOf="@+id/view_line_horizontal" />
 
-                    <View
-                        android:layout_width="0.5dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="@dimen/_5dp"
-                        android:layout_marginBottom="@dimen/_5dp"
-                        android:background="@android:color/darker_gray" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_check_in"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10dp"
+                    android:background="@android:color/transparent"
+                    android:text="Check In"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10sp"
+                    app:icon="@drawable/ic_location_on_orange_24dp"
+                    app:iconGravity="start"
+                    app:iconPadding="0dp"
+                    app:iconTint="#EE3A2F"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@+id/view_line_vertical2"
+                    app:layout_constraintTop_toBottomOf="@+id/view_line_horizontal" />
 
-                    <FrameLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-
-                        <com.google.android.material.button.MaterialButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:background="@android:color/transparent"
-                            android:singleLine="true"
-                            android:text="Photo"
-                            android:textAllCaps="false"
-                            android:textColor="@android:color/black"
-                            android:textSize="@dimen/_10sp"
-                            app:icon="@drawable/ic_photo_album_green_24dp"
-                            app:iconGravity="start"
-                            app:iconPadding="@dimen/_10dp"
-                            app:iconTint="#3AB350" />
-
-                    </FrameLayout>
-
-                    <View
-                        android:layout_width="0.5dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="@dimen/_5dp"
-                        android:layout_marginBottom="@dimen/_5dp"
-                        android:background="@android:color/darker_gray" />
-
-                    <FrameLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1">
-
-                        <com.google.android.material.button.MaterialButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:background="@android:color/transparent"
-                            android:singleLine="true"
-                            android:text="Check In"
-                            android:textAllCaps="false"
-                            android:textColor="@android:color/black"
-                            android:textSize="@dimen/_10sp"
-                            app:icon="@drawable/ic_location_on_orange_24dp"
-                            app:iconGravity="start"
-                            app:iconPadding="@dimen/_10dp"
-                            app:iconTint="#EE3A2F" />
-
-                    </FrameLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.appbar.AppBarLayout>
 

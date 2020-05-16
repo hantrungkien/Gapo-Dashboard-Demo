@@ -50,6 +50,7 @@ class NewsFeedFragment : BaseFragment<NewsFeedFragmentBinding>(), OnClickPostIte
 
             listPost.apply {
                 itemAnimator = null
+                setHasFixedSize(true)//only for demo
                 layoutManager = LinearLayoutManager(requireContext())
                 addItemDecoration(NewsFeedDecoration(requireContext()))
                 adapter = NewsFeedAdapter(viewLifecycleOwner, pool, this@NewsFeedFragment)

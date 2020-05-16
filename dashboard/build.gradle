@@ -81,9 +81,13 @@ dependencies {
     implementation deps.androidx.navigation.ui
     implementation deps.materialDesign
 
+    implementation deps.brightcove.exoPlayer2
+
     implementation deps.androidx.lifecycle.viewmodelKtx
     implementation deps.androidx.lifecycle.liveDataKtx
     implementation deps.androidx.lifecycle.liveDataCoreKtx
+
+    implementation deps.glide.glide
 
     debugImplementation deps.autoDimension
 

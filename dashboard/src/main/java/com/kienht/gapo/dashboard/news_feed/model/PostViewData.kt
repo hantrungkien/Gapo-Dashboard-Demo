@@ -12,9 +12,19 @@ import kotlinx.android.parcel.Parcelize
 data class PostViewData(
     val id: Long,
     val type: Type,
+    val username: String,
+    val userAvatar: String,
+    val time: String,
     val content: String,
-    val image: String
+    val images: List<String>?,
+    val video: String?,
+    val likeCount: String,
+    val commentCount: String,
+    val shareCount: String
 ) : Parcelable {
+
+    val firstImage: String
+        get() = images?.first() ?: ""
 
     enum class Type {
 

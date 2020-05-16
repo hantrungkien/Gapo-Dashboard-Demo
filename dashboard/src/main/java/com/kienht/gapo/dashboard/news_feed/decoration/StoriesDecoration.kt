@@ -11,9 +11,9 @@ import htkien.autodimens.R.dimen as autoDimens
  * @company OICSoft
  * @since 16/10/2019
  */
-class NewsFeedDecoration(context: Context) : RecyclerView.ItemDecoration() {
+class StoriesDecoration(context: Context) : RecyclerView.ItemDecoration() {
 
-    private val space = context.resources.getDimensionPixelSize(autoDimens._5dp)
+    private val space = context.resources.getDimensionPixelSize(autoDimens._10dp)
 
     override fun getItemOffsets(
         outRect: Rect,
@@ -27,8 +27,10 @@ class NewsFeedDecoration(context: Context) : RecyclerView.ItemDecoration() {
         }
 
         if (itemPosition == 0) {
-            outRect.top = space
+            outRect.left = space
         }
+        outRect.right = space
+        outRect.top = space
         outRect.bottom = space
     }
 }

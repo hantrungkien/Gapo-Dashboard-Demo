@@ -13,8 +13,8 @@ import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.post_text.PostText
 import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.NewsFeedBaseViewHolder
 import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.post_image.PostImageViewHolder
 import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.post_video.PostVideoViewHolder
-import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.story.StoryViewHolder
-import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.suggestion.SuggestionViewHolder
+import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.story.StoriesViewHolder
+import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.friend_request.FriendRequestViewHolder
 import com.kienht.gapo.dashboard.news_feed.model.NewsFeedViewData
 import com.kienht.gapo.dashboard.news_feed.model.PostViewData
 
@@ -52,7 +52,7 @@ class NewsFeedAdapter(
         val binding = getViewDataBinding(parent, viewType)
         return when (viewType) {
             R.layout.news_feed_stories_item -> {
-                StoryViewHolder(
+                StoriesViewHolder(
                     binding,
                     pool,
                     lifecycleOwner
@@ -76,8 +76,8 @@ class NewsFeedAdapter(
                     lifecycleOwner
                 )
             }
-            R.layout.news_feed_suggestions_item -> {
-                SuggestionViewHolder(
+            R.layout.news_feed_friend_requests_item -> {
+                FriendRequestViewHolder(
                     binding,
                     pool,
                     lifecycleOwner
@@ -99,10 +99,10 @@ class NewsFeedAdapter(
             is PostVideoViewHolder -> {
                 newsfeed.post?.let { holder.bind(it, onClickPostItemListener) }
             }
-            is SuggestionViewHolder -> {
-                newsfeed.suggestions?.let { holder.bind(it, onClickPostItemListener) }
+            is FriendRequestViewHolder -> {
+                newsfeed.friendRequests?.let { holder.bind(it, onClickPostItemListener) }
             }
-            is StoryViewHolder -> {
+            is StoriesViewHolder -> {
                 newsfeed.stories?.let { holder.bind(it, onClickPostItemListener) }
             }
         }
@@ -124,7 +124,7 @@ class NewsFeedAdapter(
                 }
                 else -> throw IllegalArgumentException()
             }
-            NewsFeedViewData.Type.SUGGESTION -> R.layout.news_feed_suggestions_item
+            NewsFeedViewData.Type.FRIEND_REQUEST -> R.layout.news_feed_friend_requests_item
         }
     }
 

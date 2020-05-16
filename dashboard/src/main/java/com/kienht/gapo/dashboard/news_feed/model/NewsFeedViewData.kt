@@ -32,7 +32,7 @@ data class NewsFeedViewData(
     val type: Type,
     val stories: List<StoryViewData>?,
     val post: PostViewData?,
-    val suggestions: List<SuggestionViewData>?
+    val friendRequests: List<FriendRequestViewData>?
 ) : Parcelable {
 
     enum class Type {
@@ -43,8 +43,8 @@ data class NewsFeedViewData(
         POST {
             override fun value(): String = "POST"
         },
-        SUGGESTION {
-            override fun value(): String = "SUGGESTION"
+        FRIEND_REQUEST {
+            override fun value(): String = "FRIEND_REQUEST"
         };
 
         abstract fun value(): String

@@ -10,26 +10,26 @@ import kotlinx.android.parcel.Parcelize
  * @since 16/05/2020
  */
 @Parcelize
-data class StoryViewData(
+data class FriendRequestViewData(
     val id: Long,
-    val username: String,
-    val userAvatar: String,
-    val contentUrl: String
+    val friendName: String,
+    val friendAvatar: String,
+    val mutualFriendsCount: Int
 ) : Parcelable {
 
-    object DiffItemCallback : DiffUtil.ItemCallback<StoryViewData>() {
+    object DiffItemCallback : DiffUtil.ItemCallback<FriendRequestViewData>() {
         override fun areItemsTheSame(
-            oldItem: StoryViewData,
-            newItem: StoryViewData
+            oldItem: FriendRequestViewData,
+            newItem: FriendRequestViewData
         ): Boolean {
             return oldItem.id == newItem.id
         }
 
         override fun areContentsTheSame(
-            oldItem: StoryViewData,
-            newItem: StoryViewData
+            oldItem: FriendRequestViewData,
+            newItem: FriendRequestViewData
         ): Boolean {
-            return oldItem.contentUrl == newItem.contentUrl
+            return oldItem.mutualFriendsCount == newItem.mutualFriendsCount
         }
     }
 }
