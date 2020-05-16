@@ -1,0 +1,217 @@
+ext.versions = [
+        androidBuildTools  : "29.0.3",
+        androidMinSdk      : 21,
+        androidCompileSdk  : 29,
+        androidTargetSdk   : 29,
+        androidGradle      : '3.6.3',
+        kotlin             : '1.3.72',
+        coroutines         : '1.3.6',
+        appcompat          : '1.2.0-rc01',
+        materialDesign     : '1.2.0-alpha06',
+        recyclerview       : '1.2.0-alpha03',
+        viewpager2         : '1.1.0-alpha01',
+        leanback           : '1.1.0-alpha02',
+        lifecycle          : '2.3.0-alpha01',
+        multidex           : '2.0.1',
+        coreKtx            : '1.3.0-rc01',
+        activityKtx        : '1.2.0-alpha03',
+        fragmentKtx        : '1.3.0-alpha04',
+        navigation         : '2.3.0-alpha06',
+        collectionKtx      : '1.1.0',
+        dynamicAnimation   : '1.0.0-alpha02',
+        workManager        : '2.3.4',
+        room               : '2.2.3',
+        constraintlayout   : '2.0.0-beta6',
+        biometric          : '1.0.1',
+        exifinterface      : '1.2.0',
+        googlePlayService  : '17.0.0',
+        firebaseMessaging  : '20.1.6',
+        firebaseCrashlytics: '17.0.0',
+        rxJava2            : '2.2.19',
+        rxKotlin2          : '2.4.0',
+        rxAndroid2         : '2.1.1',
+        rxNetwork2         : '3.0.6',
+        okhttp3            : '4.6.0',
+        retrofit           : '2.8.1',
+        scarlet            : '0.2.4',
+        moshi              : '1.9.2',
+        glide              : '4.11.0',
+        dagger             : '2.27',
+        javaxJsr250        : '1.0',
+        javaxInject        : '1',
+        materialDialog     : '3.3.0',
+        autoDimension      : '1.0.4',
+        calligraphy        : '3.1.1',
+        viewpump           : '2.0.3',
+        circleImageView    : '3.1.0',
+        brightcove         : '6.12.0',
+        toasty             : '1.4.2',
+        loadingUI          : '1.0.4',
+        realmExtensions    : '2.5.0',
+        videocache         : '2.7.1',
+        eventbus           : '3.2.0',
+        photoView          : '2.0.0',
+        iTextPdf           : '5.5.10',
+        zxing              : '1.9.13',
+        segmentView        : '1.0.6',
+        imagePicker        : '2.1.0',
+        pdfViewer          : '3.2.0-beta.1',
+        mpAndroidChart     : 'v3.1.0',
+        matisse            : 'v0.5.3-htk',
+        imageDrawingView   : '1.0.0-alpha01',
+        estimoteScanPlugin : '0.25.4',
+        altbeacon          : '2.17',
+        localization       : '1.2.5',
+        deeplinkdispatch   : '5.1.0',
+        leakcanary         : '2.3'
+]
+
+ext.deps = [
+        gradle_plugins   : [
+                android            : "com.android.tools.build:gradle:${versions.androidGradle}",
+                kotlin             : "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
+                realm              : "io.realm:realm-gradle-plugin:6.1.0",
+                googleServices     : "com.google.gms:google-services:4.3.3",
+                deploygate         : "com.deploygate:gradle:2.1.0",
+                firebaseCrashlytics: "com.google.firebase:firebase-crashlytics-gradle:2.1.0",
+                navigationArgs     : "androidx.navigation:navigation-safe-args-gradle-plugin:${versions.navigation}"
+        ],
+        kotlin           : [
+                stdlibJdk7: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}",
+                stdlibJdk8: "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${versions.kotlin}",
+                coroutines: [
+                        coroutines: "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}",
+                        android   : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}",
+                        rx2       : "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:${versions.coroutines}"
+                ]
+        ],
+        androidx         : [
+                coreKtx            : "androidx.core:core-ktx:${versions.coreKtx}",
+                appcompat          : "androidx.appcompat:appcompat:${versions.appcompat}",
+                leanback           : "androidx.leanback:leanback:${versions.leanback}",
+                viewpager2         : "androidx.viewpager2:viewpager2:${versions.viewpager2}",
+                recyclerview       : "androidx.recyclerview:recyclerview:${versions.recyclerview}",
+                multidex           : "androidx.multidex:multidex:${versions.multidex}",
+                dataBindingCompiler: "androidx.databinding:databinding-compiler:${versions.androidGradle}",
+                activityKtx        : "androidx.activity:activity-ktx:${versions.activityKtx}",
+                fragmentKtx        : "androidx.fragment:fragment-ktx:${versions.fragmentKtx}",
+                dynamicAnimation   : "androidx.dynamicanimation:dynamicanimation-ktx:${versions.fragmentKtx}",
+                constraintlayout   : "androidx.constraintlayout:constraintlayout:${versions.constraintlayout}",
+                exifinterface      : "androidx.exifinterface:exifinterface:${versions.exifinterface}",
+                biometric          : "androidx.biometric:biometric:${versions.biometric}",
+                roomKtx            : "androidx.room:room-ktx:${versions.room}",
+                lifecycle          : [
+                        process            : "androidx.lifecycle:lifecycle-process:${versions.lifecycle}",
+                        liveDataCoreKtx    : "androidx.lifecycle:lifecycle-livedata-core-ktx:${versions.lifecycle}",
+                        liveDataKtx        : "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycle}",
+                        commonJava8        : "androidx.lifecycle:lifecycle-common-java8:${versions.lifecycle}",
+                        reactivestreamsKtx : "androidx.lifecycle:lifecycle-reactivestreams-ktx:${versions.lifecycle}",
+                        service            : "androidx.lifecycle:lifecycle-service:${versions.lifecycle}",
+                        viewmodelKtx       : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}",
+                        viewmodelSavedstate: "androidx.lifecycle:lifecycle-viewmodel-savedstate:${versions.lifecycle}",
+                        collectionKtx      : "androidx.collection:collection-ktx:${versions.collectionKtx}"
+                ],
+                workManager        : [
+                        runtimeKtx: "androidx.work:work-runtime-ktx:${versions.workManager}",
+                        rxjava2   : "androidx.work:work-rxjava2:${versions.workManager}",
+                        gcm       : "androidx.work:work-gcm:${versions.workManager}"
+                ],
+                navigation         : [
+                        fragment: "androidx.navigation:navigation-fragment-ktx:${versions.navigation}",
+                        ui      : "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
+                ]
+        ],
+        materialDialog   : [
+                core        : "com.afollestad.material-dialogs:core:${versions.materialDialog}",
+                bottomsheets: "com.afollestad.material-dialogs:bottomsheets:${versions.materialDialog}",
+                input       : "com.afollestad.material-dialogs:input:${versions.materialDialog}",
+                lifecycle   : "com.afollestad.material-dialogs:lifecycle:${versions.materialDialog}"
+        ],
+        googlePlayService: [
+                map     : "com.google.android.gms:play-services-maps:${versions.googlePlayService}",
+                location: "com.google.android.gms:play-services-location:${versions.googlePlayService}"
+        ],
+        firebase         : [
+                messaging  : "com.google.firebase:firebase-messaging:${versions.firebaseMessaging}",
+                crashlytics: "com.google.firebase:firebase-crashlytics:${versions.firebaseCrashlytics}"
+        ],
+        reactivex        : [
+                rxJava2   : "io.reactivex.rxjava2:rxjava:${versions.rxJava2}",
+                rxKotlin2 : "io.reactivex.rxjava2:rxkotlin:${versions.rxKotlin2}",
+                rxAndroid2: "io.reactivex.rxjava2:rxandroid:${versions.rxAndroid2}",
+                rxNetwork2: "com.github.pwittchen:reactivenetwork-rx2:${versions.rxNetwork2}"
+        ],
+        dagger           : [
+                dagger          : "com.google.dagger:dagger:${versions.dagger}",
+                android         : "com.google.dagger:dagger-android:${versions.dagger}",
+                compiler        : "com.google.dagger:dagger-compiler:${versions.dagger}",
+                androidProcessor: "com.google.dagger:dagger-android-processor:${versions.dagger}"
+        ],
+        javax            : [
+                jsr250: "javax.annotation:jsr250-api:${versions.javaxJsr250}",
+                inject: "javax.inject:javax.inject:${versions.javaxInject}"
+        ],
+        glide            : [
+                glide   : "com.github.bumptech.glide:glide:${versions.glide}",
+                compiler: "com.github.bumptech.glide:compiler:${versions.glide}"
+        ],
+        inflationx       : [
+                calligraphy3: "io.github.inflationx:calligraphy3:${versions.calligraphy}",
+                viewpump    : "io.github.inflationx:viewpump:${versions.viewpump}"
+        ],
+        brightcove       : [
+                androidSdk     : "com.brightcove.player:android-sdk:${versions.brightcove}",
+                appcompatPlugin: "com.brightcove.player:android-appcompat-plugin:${versions.brightcove}",
+                exoPlayer2     : "com.brightcove.player:exoplayer2:${versions.brightcove}"
+        ],
+        moshi            : [
+                kotlin       : "com.squareup.moshi:moshi-kotlin:${versions.moshi}",
+                adapters     : "com.squareup.moshi:moshi-adapters:${versions.moshi}",
+                kotlinCodegen: "com.squareup.moshi:moshi-kotlin-codegen:${versions.moshi}"
+        ],
+        okhttp3          : [
+                okhttp : "com.squareup.okhttp3:okhttp:${versions.okhttp3}",
+                logging: "com.squareup.okhttp3:logging-interceptor:${versions.okhttp3}"
+        ],
+        retrofit         : [
+                retrofit      : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+                converterMoshi: "com.squareup.retrofit2:converter-moshi:${versions.retrofit}",
+                rxjava2       : "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit}",
+        ],
+        beacon           : [
+                estimoteScanPlugin: "com.estimote:scanning-plugin:${versions.estimoteScanPlugin}",
+                altbeacon         : "org.altbeacon:android-beacon-library:${versions.altbeacon}",
+        ],
+        scarlet          : [
+                scarlet         : "com.github.tinder.scarlet:scarlet:${versions.scarlet}",
+                lifecycleAndroid: "com.github.tinder.scarlet:scarlet-lifecycle-android:${versions.scarlet}",
+                socketIO        : "com.github.tinder.scarlet:scarlet-protocol-socketio-client:${versions.scarlet}",
+                rxjava2         : "com.github.tinder.scarlet:scarlet-stream-adapter-rxjava2:${versions.scarlet}",
+                moshi           : "com.github.tinder.scarlet:scarlet-message-adapter-moshi:${versions.scarlet}"
+        ],
+        deeplinkdispatch : [
+                deeplinkdispatch: "com.airbnb:deeplinkdispatch:${versions.deeplinkdispatch}",
+                processor       : "com.airbnb:deeplinkdispatch-processor:${versions.deeplinkdispatch}"
+        ],
+        leakcanary       : [
+                android             : "com.squareup.leakcanary:leakcanary-android:${versions.leakcanary}",
+                objectWatcherAndroid: "com.squareup.leakcanary:leakcanary-object-watcher-android:${versions.leakcanary}"
+        ],
+        materialDesign   : "com.google.android.material:material:${versions.materialDesign}",
+        circleImageView  : "de.hdodenhof:circleimageview:${versions.circleImageView}",
+        autoDimension    : "com.github.hantrungkien:AutoDimension:${versions.autoDimension}",
+        toasty           : "com.github.GrenderG:Toasty:${versions.toasty}",
+        loadingUI        : "com.victor:lib:${versions.loadingUI}",
+        videocache       : "com.danikula:videocache:${versions.videocache}",
+        eventbus         : "org.greenrobot:eventbus:${versions.eventbus}",
+        photoView        : "com.github.chrisbanes:PhotoView:${versions.photoView}",
+        iTextPdf         : "com.itextpdf:itextg:${versions.iTextPdf}",
+        zxing            : "me.dm7.barcodescanner:zxing:${versions.zxing}",
+        segmentView      : "info.hoang8f:android-segmented:${versions.segmentView}",
+        pdfViewer        : "com.github.barteksc:android-pdf-viewer:${versions.pdfViewer}",
+        mpAndroidChart   : "com.github.PhilJay:MPAndroidChart:${versions.mpAndroidChart}",
+        matisse          : "com.github.hantrungkien:Matisse:${versions.matisse}",
+        imageDrawingView : "com.github.hantrungkien:ImageDrawingView:${versions.imageDrawingView}",
+        localization     : "com.akexorcist:localization:${versions.localization}",
+        realmExtensions  : "com.github.vicpinm:krealmextensions:${versions.realmExtensions}",
+]

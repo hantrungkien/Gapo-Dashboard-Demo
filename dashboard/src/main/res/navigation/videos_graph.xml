@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/videos"
+    android:id="@+id/videos">
+
+    <fragment
+        android:id="@+id/videos"
+        android:name="com.kienht.gapo.dashboard.videos.VideosFragment"
+        android:label="videos_fragment"
+        tools:layout="@layout/videos_fragment">
+
+    </fragment>
+
+</navigation>

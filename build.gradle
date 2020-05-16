@@ -1,0 +1,72 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    apply from: rootProject.file("dependencies.gradle")
+    ext {
+        kotlin_version = '1.3.72'
+    }
+
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath deps.gradle_plugins.android
+        classpath deps.gradle_plugins.kotlin
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+apply from: 'dependencies.gradle'
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url 'http://repo.brightcove.com/releases' }
+        maven { url 'https://dl.bintray.com/sysdata/maven' }
+        maven { url 'http://repo.pageturner-reader.org' }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        mavenCentral()
+    }
+
+    def ext = rootProject.extensions.getByName("ext")
+
+    configurations.all {
+        resolutionStrategy {
+            //failOnVersionConflict()
+            force "io.reactivex.rxjava2:rxjava:${ext.versions.rxJava2}"
+            force "io.reactivex.rxjava2:rxandroid:${ext.versions.rxAndroid2}"
+            eachDependency { DependencyResolveDetails details ->
+                if (details.requested.group == 'org.jetbrains.kotlinx') {
+                    if (details.requested.name.contains('coroutines')) {
+                        details.useVersion "${ext.versions.coroutines}"
+                    }
+                }
+                if (details.requested.group == 'com.squareup.moshi') {
+                    details.useVersion "${ext.versions.moshi}"
+                }
+                if (details.requested.group == 'com.squareup.okhttp3') {
+                    details.useVersion "${ext.versions.okhttp3}"
+                }
+                if (details.requested.name == 'kotlin-stdlib-jdk8'
+                        || details.requested.name == 'kotlin-stdlib-jdk7'
+                        || details.requested.name == 'kotlin-reflect'
+                        || details.requested.name == 'kotlin-stdlib-common') {
+                    details.useVersion "${ext.versions.kotlin}"
+                }
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

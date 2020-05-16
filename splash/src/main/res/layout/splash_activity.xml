@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.widget.ImageView.ScaleType" />
+
+        <variable
+            name="viewModel"
+            type="com.kienht.gapo.splash.viewmodel.SplashViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FF5FAB17">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:placeHolder="@{@drawable/splash_logo}"
+            app:scaleType="@{ScaleType.FIT_CENTER}"
+            tools:scaleType="fitCenter"
+            tools:src="@drawable/splash_logo" />
+
+    </FrameLayout>
+</layout>

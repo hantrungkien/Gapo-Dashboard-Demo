@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    def versions = rootProject.extensions.getByName("ext")["versions"]
+
+    compileSdkVersion versions["androidCompileSdk"]
+    buildToolsVersion versions["androidBuildTools"]
+
+    defaultConfig {
+        applicationId "com.kienht.gapo"
+        minSdkVersion versions["androidMinSdk"]
+        targetSdkVersion versions["androidTargetSdk"]
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        kotlinOptions {
+            jvmTarget = "1.8"
+            suppressWarnings = true
+        }
+    }
+
+    dexOptions {
+        preDexLibraries = true
+        javaMaxHeapSize "4g"
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+    }
+
+    androidExtensions {
+        experimental = true
+        features = ["parcelize"]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dynamicFeatures = [":dashboard", ":login", ":post_details"]
+
+
+}
+
+kapt {
+    correctErrorTypes = true
+    useBuildCache = true
+    javacOptions {
+        option("-Xmaxerrs", 500)
+    }
+    arguments {
+        arg("deepLinkDoc.output", "${buildDir}/doc/deeplinks.txt")
+        arg("deepLink.incremental", "true")
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':splash')
+    implementation project(':deeplink')
+    implementation project(':core')
+    implementation project(':shared')
+    implementation project(':dashboard-data')
+    implementation project(':dashboard-domain')
+
+    implementation deps.kotlin.stdlibJdk8
+    implementation deps.kotlin.coroutines.coroutines
+    implementation deps.kotlin.coroutines.android
+
+    implementation deps.androidx.multidex
+    implementation deps.androidx.coreKtx
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.constraintlayout
+    implementation deps.androidx.recyclerview
+    implementation deps.androidx.fragmentKtx
+    implementation deps.materialDesign
+
+    implementation deps.androidx.lifecycle.viewmodelKtx
+    implementation deps.androidx.lifecycle.liveDataKtx
+    implementation deps.androidx.lifecycle.liveDataCoreKtx
+
+    implementation deps.reactivex.rxKotlin2
+
+    implementation deps.retrofit.retrofit
+    implementation deps.retrofit.converterMoshi
+    implementation deps.retrofit.rxjava2
+
+    implementation deps.autoDimension
+
+    implementation deps.dagger.android
+    kapt deps.dagger.compiler
+
+    kapt deps.androidx.dataBindingCompiler
+
+    implementation deps.deeplinkdispatch.deeplinkdispatch
+    kapt deps.deeplinkdispatch.processor
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

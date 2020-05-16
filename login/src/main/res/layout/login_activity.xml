@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.widget.ImageView.ScaleType" />
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="viewModel"
+            type="com.kienht.gapo.login.viewmodel.LoginViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            app:placeHolder="@{@drawable/authentication_image}"
+            app:scaleType="@{ScaleType.FIT_CENTER}"
+            tools:scaleType="fitCenter"
+            tools:src="@drawable/authentication_image" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/button_login"
+            android:layout_below="@+id/image_logo"
+            android:padding="@dimen/_20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                app:isVisible="@{!viewModel.isShowLoadingLiveData}">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xin chào Gapoer!"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:text="Nhập số di động của bạn để tiếp tục"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_14sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_text_input"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone"
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:text="@={viewModel.phoneNumberLiveData}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/progress_circular"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="@dimen/_50dp"
+                android:layout_height="@dimen/_50dp"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="#FF5FAB17"
+                android:visibility="gone"
+                app:isVisible="@{viewModel.isShowLoadingLiveData}" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/text_version"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_50dp"
+            android:layout_marginEnd="@dimen/_50dp"
+            android:layout_marginBottom="@dimen/_60dp"
+            android:backgroundTint="#FF5FAB17"
+            android:clickable="@{!viewModel.isShowLoadingLiveData}"
+            android:enabled="@{!TextUtils.isEmpty(viewModel.phoneNumberLiveData)}"
+            android:onClick="@{() -> viewModel.login()}"
+            android:paddingTop="@dimen/_10dp"
+            android:paddingBottom="@dimen/_10dp"
+            android:text="Tiếp Tục"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/text_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/_15dp"
+            android:text="Phiên bản 2.0.4" />
+
+    </RelativeLayout>
+</layout>

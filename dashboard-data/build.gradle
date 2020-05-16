@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+
+    def versions = rootProject.extensions.getByName("ext")["versions"]
+
+    compileSdkVersion versions["androidCompileSdk"]
+    buildToolsVersion versions["androidBuildTools"]
+
+    defaultConfig {
+        minSdkVersion versions["androidMinSdk"]
+        targetSdkVersion versions["androidTargetSdk"]
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        kotlinOptions {
+            jvmTarget = "1.8"
+            suppressWarnings = true
+        }
+    }
+}
+
+kapt {
+    correctErrorTypes = true
+    useBuildCache = true
+    javacOptions {
+        option("-Xmaxerrs", 500)
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':dashboard-domain')
+    implementation project(':shared')
+
+    implementation deps.kotlin.stdlibJdk8
+    implementation deps.kotlin.coroutines.coroutines
+
+    implementation deps.retrofit.retrofit
+    implementation deps.retrofit.converterMoshi
+    implementation deps.retrofit.rxjava2
+
+    implementation deps.dagger.dagger
+    kapt deps.dagger.compiler
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

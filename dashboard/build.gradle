@@ -1,0 +1,100 @@
+apply plugin: 'com.android.dynamic-feature'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    def versions = rootProject.extensions.getByName("ext")["versions"]
+
+    compileSdkVersion versions["androidCompileSdk"]
+    buildToolsVersion versions["androidBuildTools"]
+
+    defaultConfig {
+        minSdkVersion versions["androidMinSdk"]
+        targetSdkVersion versions["androidTargetSdk"]
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        kotlinOptions {
+            jvmTarget = "1.8"
+            suppressWarnings = true
+        }
+    }
+
+    dexOptions {
+        preDexLibraries = true
+        javaMaxHeapSize "4g"
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+    }
+
+    androidExtensions {
+        experimental = true
+        features = ["parcelize"]
+    }
+
+}
+
+kapt {
+    correctErrorTypes = true
+    useBuildCache = true
+    javacOptions {
+        option("-Xmaxerrs", 500)
+    }
+    arguments {
+        arg("deepLink.incremental", "true")
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':app')
+    implementation project(':core')
+    implementation project(':shared')
+    implementation project(':dashboard-data')
+    implementation project(':dashboard-domain')
+
+    implementation deps.kotlin.stdlibJdk8
+    implementation deps.kotlin.coroutines.coroutines
+    implementation deps.kotlin.coroutines.android
+
+    implementation deps.androidx.coreKtx
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.constraintlayout
+    implementation deps.androidx.recyclerview
+    implementation deps.androidx.viewpager2
+    implementation deps.androidx.fragmentKtx
+    implementation deps.androidx.navigation.fragment
+    implementation deps.androidx.navigation.ui
+    implementation deps.materialDesign
+
+    implementation deps.androidx.lifecycle.viewmodelKtx
+    implementation deps.androidx.lifecycle.liveDataKtx
+    implementation deps.androidx.lifecycle.liveDataCoreKtx
+
+    debugImplementation deps.autoDimension
+
+    implementation deps.dagger.android
+    kapt deps.dagger.compiler
+
+    kapt deps.androidx.dataBindingCompiler
+
+    implementation deps.deeplinkdispatch.deeplinkdispatch
+    kapt deps.deeplinkdispatch.processor
+
+    compileOnly deps.moshi.kotlin
+    compileOnly deps.retrofit.retrofit
+}

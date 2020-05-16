@@ -1,0 +1,105 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    def versions = rootProject.extensions.getByName("ext")["versions"]
+
+    compileSdkVersion versions["androidCompileSdk"]
+    buildToolsVersion versions["androidBuildTools"]
+
+    defaultConfig {
+        minSdkVersion versions["androidMinSdk"]
+        targetSdkVersion versions["androidTargetSdk"]
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        kotlinOptions {
+            jvmTarget = "1.8"
+            suppressWarnings = true
+        }
+    }
+
+    dexOptions {
+        preDexLibraries = true
+        javaMaxHeapSize "4g"
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+    }
+
+    androidExtensions {
+        experimental = true
+        features = ["parcelize"]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+kapt {
+    correctErrorTypes = true
+    useBuildCache = true
+    javacOptions {
+        option("-Xmaxerrs", 500)
+    }
+    arguments {
+        arg("deepLinkDoc.output", "${buildDir}/doc/deeplinks.txt")
+        arg("deepLink.incremental", "true")
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':shared')
+
+    implementation deps.kotlin.stdlibJdk8
+    implementation deps.kotlin.coroutines.coroutines
+    implementation deps.kotlin.coroutines.android
+    implementation deps.reactivex.rxJava2
+    implementation deps.reactivex.rxAndroid2
+
+    implementation deps.androidx.multidex
+    implementation deps.androidx.coreKtx
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.fragmentKtx
+    implementation deps.androidx.lifecycle.liveDataKtx
+    implementation deps.androidx.recyclerview
+
+    implementation deps.moshi.kotlin
+
+    implementation deps.okhttp3.okhttp
+    implementation deps.okhttp3.logging
+
+    implementation deps.glide.glide
+    kapt deps.glide.compiler
+
+    implementation deps.dagger.android
+    kapt deps.dagger.compiler
+
+    kapt deps.androidx.dataBindingCompiler
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
