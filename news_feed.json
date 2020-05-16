@@ -153,7 +153,7 @@
         "time": "1 hr",
         "content": "Thanh xuân là tuổi đẹp nhất của cuộc đời chúng ta Hãy cảm nhận theo cách riêng của bạn 😝",
         "images": [
-          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_0.jpg"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_4.jpg"
         ],
         "likeCount": "69",
         "commentCount": "210",
@@ -274,7 +274,7 @@
         "time": "Yesterday at 18:18",
         "content": "Đưa tay lên nàoo..mãi bên nhao bạn nhớ 😘😘",
         "images": [
-          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_11.jpg"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_7.jpg"
         ],
         "likeCount": "10K",
         "commentCount": "6K",
@@ -322,6 +322,9 @@
         "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/tuyet_loan_nguyen.jpg",
         "time": "1 hr",
         "content": "Sương sương xuống phố...☺️ Phố đông quá nên thôi đi dzìa 🤣",
+        "images": [
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_10.jpg"
+        ],
         "likeCount": "1.1K",
         "commentCount": "216",
         "shareCount": "113"
@@ -338,7 +341,7 @@
         "time": "1 giờ",
         "content": "Sau mùa dịch ta có gì??? ♟♟♟",
         "images": [
-          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_15.jpg"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_11.jpg"
         ],
         "likeCount": "1.8K",
         "commentCount": "696",
@@ -356,7 +359,7 @@
         "time": "9 tháng 5 lúc 19:07",
         "content": "Bạn sẽ làm gì khi ở nhà 🏡?",
         "images": [
-          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_16.jpg"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_12.jpg"
         ],
         "likeCount": "11.8K",
         "commentCount": "996",
@@ -374,7 +377,7 @@
         "time": "15 giờ",
         "content": "“ 14/2 thì bằng 7. 24/7 thì lúc nào cũng muốn ăn “ 🤪🤪",
         "images": [
-          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_17.jpg"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_13.jpg"
         ],
         "likeCount": "2.8K",
         "commentCount": "396",
@@ -407,7 +410,7 @@
         "time": "10 tháng 5 lúc 21:23",
         "content": "Tự do-hạnh phúc! Ở đây và bây giờ ❤️",
         "images": [
-          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_19.jpg"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_15.jpg"
         ],
         "likeCount": "8.2K",
         "commentCount": "1296",
@@ -425,7 +428,7 @@
         "time": "12 giờ",
         "content": "Trước khi bạn yêu thương nhân loại thì bạn hãy yêu thương gia đình mình ❤️❤️❤️",
         "images": [
-          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_20.jpg"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_16.jpg"
         ],
         "likeCount": "5.8K",
         "commentCount": "259",
@@ -437,13 +440,13 @@
       "type": "POST",
       "post": {
         "id": 17,
-        "type": "TEXT",
+        "type": "IMAGE",
         "username": "Nguyễn Khoa Tóc Tiên",
         "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/toc_tien.jpg",
         "time": "Hôm qua lúc 09:11",
         "content": "Xanh bơ có làm anh lơ mơ🥑🥑🥑",
         "images": [
-          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_21.jpg"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_17.jpg"
         ],
         "likeCount": "8K",
         "commentCount": "1K",
