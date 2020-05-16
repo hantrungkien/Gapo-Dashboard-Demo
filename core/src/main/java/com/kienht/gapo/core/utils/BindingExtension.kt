@@ -40,16 +40,16 @@ fun <T> RecyclerView.setDataBinding(data: List<T>?) {
     (adapter as? ListAdapter<T, *>)?.submitList(data)
 }
 
-@SuppressLint("CheckResult")
 @BindingAdapter(
-    value = ["url", "placeHolder", "error", "scaleType"],
+    value = ["url", "placeHolder", "error", "scaleType", "isCircle"],
     requireAll = false
 )
 fun ImageView.setImageBinding(
     url: String?,
     placeHolder: Drawable?,
     error: Drawable?,
-    scaleType: ImageView.ScaleType? = null
+    scaleType: ImageView.ScaleType? = null,
+    isCircle: Boolean = false
 ) {
     val requestOptions = RequestOptions()
 
@@ -60,7 +60,11 @@ fun ImageView.setImageBinding(
         requestOptions.error(error)
     }
 
-    if (scaleType != null) {
+    if (isCircle) {
+        requestOptions.circleCrop()
+    }
+
+    if (!isCircle && scaleType != null) {
         when (scaleType) {
             ImageView.ScaleType.MATRIX -> {
                 setScaleType(ImageView.ScaleType.MATRIX)

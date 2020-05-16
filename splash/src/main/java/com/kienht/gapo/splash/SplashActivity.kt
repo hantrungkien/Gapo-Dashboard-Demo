@@ -37,7 +37,7 @@ class SplashActivity : BaseActivity<SplashActivityBinding>() {
         }
 
         lifecycleScope.launch {
-            delay(2000)
+//            delay(2000)
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("kienht://login"))
             startActivity(intent)
             finish()

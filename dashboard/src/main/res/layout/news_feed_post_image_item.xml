@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.kienht.gapo.dashboard.news_feed.model.PostViewData" />
+
+        <variable
+            name="clickItem"
+            type="com.kienht.gapo.dashboard.news_feed.adapter.OnClickPostItemListener" />
+
+        <variable
+            name="adapterPosition"
+            type="Integer" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_10dp"
+            android:text="@{item.content}"
+            android:textColor="@android:color/black"
+            tools:text="KienHT" />
+
+    </FrameLayout>
+</layout>
