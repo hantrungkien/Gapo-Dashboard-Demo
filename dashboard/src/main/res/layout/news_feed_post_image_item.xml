@@ -115,7 +115,7 @@
             tools:text="1.8K" />
 
         <TextView
-            android:id="@+id/text_comment_count"
+            android:id="@+id/text_comment_share_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text_content"
@@ -125,14 +125,14 @@
             android:layout_marginEnd="@dimen/_10dp"
             android:ellipsize="end"
             android:maxLines="15"
-            android:text="@{item.commentCount + ` Comments`}"
-            tools:text="1.8K Comments" />
+            android:text="@{item.commentCount + ` Comments   `+ item.shareCount + ` Shares`}"
+            tools:text="1.8K Comments   322 Shares" />
 
         <View
             android:id="@+id/view_line_horizontal"
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:layout_below="@+id/text_comment_count"
+            android:layout_below="@+id/text_comment_share_count"
             android:layout_marginStart="@dimen/_10dp"
             android:layout_marginTop="@dimen/_10dp"
             android:layout_marginEnd="@dimen/_10dp"

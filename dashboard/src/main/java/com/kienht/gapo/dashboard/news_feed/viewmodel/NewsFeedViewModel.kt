@@ -18,8 +18,7 @@ class NewsFeedViewModel @Inject constructor(
     @CoDispatcherIOQualifier private val executor: CoroutineDispatcher
 ) : ViewModel() {
 
-    val myAvatarUrl: String =
-        "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/xuan_lan.jpg"
+    val myAvatarUrl: String = "https://i.ibb.co/frD0Thn/avatar-kienht.jpg"
 
     private val action = MutableLiveData<Unit?>()
 
