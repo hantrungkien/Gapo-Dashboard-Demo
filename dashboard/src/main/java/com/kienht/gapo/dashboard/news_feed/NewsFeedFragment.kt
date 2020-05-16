@@ -2,15 +2,12 @@ package com.kienht.gapo.dashboard.news_feed
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kienht.gapo.core.base.BaseFragment
-import com.kienht.gapo.core.utils.TAG
 import com.kienht.gapo.dashboard.R
 import com.kienht.gapo.dashboard.databinding.NewsFeedFragmentBinding
 import com.kienht.gapo.dashboard.news_feed.adapter.NewsFeedAdapter

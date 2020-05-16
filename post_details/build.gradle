@@ -64,8 +64,6 @@ dependencies {
     implementation project(':app')
     implementation project(':core')
     implementation project(':shared')
-    implementation project(':dashboard-data')
-    implementation project(':dashboard-domain')
 
     implementation deps.kotlin.stdlibJdk8
     implementation deps.kotlin.coroutines.coroutines

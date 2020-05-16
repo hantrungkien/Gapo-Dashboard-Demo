@@ -2,7 +2,6 @@ package com.kienht.gapo.post_details.di
 
 import com.kienht.gapo.core.di.CoreComponent
 import com.kienht.gapo.core.di.coreComponent
-import com.kienht.gapo.dashboard.data.di.DashboardDataModule
 import com.kienht.gapo.post_details.PostDetailsActivity
 import com.kienht.gapo.shared.FeatureScope
 import dagger.BindsInstance
@@ -16,7 +15,7 @@ import dagger.android.AndroidInjector
  */
 @FeatureScope
 @Component(
-    modules = [PostDetailsModule::class, DashboardDataModule::class],
+    modules = [PostDetailsModule::class],
     dependencies = [CoreComponent::class]
 )
 interface PostDetailsComponent : AndroidInjector<PostDetailsActivity> {

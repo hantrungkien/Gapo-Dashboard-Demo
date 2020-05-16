@@ -22,7 +22,7 @@
         app:cardCornerRadius="@dimen/_5dp">
 
         <RelativeLayout
-            android:layout_width="@dimen/_100dp"
+            android:layout_width="@dimen/_110dp"
             android:layout_height="@dimen/_180dp">
 
             <ImageView
