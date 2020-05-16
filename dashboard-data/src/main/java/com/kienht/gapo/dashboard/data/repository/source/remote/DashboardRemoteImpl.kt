@@ -14,7 +14,7 @@ internal class DashboardRemoteImpl @Inject constructor(
 ) : DashboardRemote {
 
     override suspend fun fetchNewsFeeds(): List<NewsFeedDTOModel> {
-        val response = dashboardApiService.fetchNewsFeedData()
+        val response = dashboardApiService.fetchNewsFeeds()
         return response.data ?: emptyList()
     }
 }

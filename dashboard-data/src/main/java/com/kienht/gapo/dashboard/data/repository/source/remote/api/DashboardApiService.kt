@@ -15,5 +15,5 @@ internal interface DashboardApiService {
     }
 
     @GET("master/news_feed.json")
-    suspend fun fetchNewsFeedData(): FetchNewsFeedResponse
+    suspend fun fetchNewsFeeds(): FetchNewsFeedResponse
 }

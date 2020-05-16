@@ -11,5 +11,5 @@ import com.squareup.moshi.JsonClass
  */
 @JsonClass(generateAdapter = true)
 data class FetchNewsFeedResponse(
-    @Json(name = "id") val data: List<NewsFeedDTOModel>? = null
+    @Json(name = "data") val data: List<NewsFeedDTOModel>? = null
 )
