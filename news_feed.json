@@ -6,69 +6,75 @@
       "stories": [
         {
           "id": 0,
-          "username": "Ngọc Trinh",
-          "userAvatar": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/p960x960/93974846_1979525622178242_3989847089805787136_o.jpg?_nc_cat=1&_nc_sid=85a577&_nc_oc=AQmzBYwz7eSrzf1FS1gp9mWL2lln9eytoj8BXZljuLS3w9zbpHkm9SL_csjPg480IeU&_nc_ht=scontent.fhan2-4.fna&_nc_tp=6&oh=eb8a04073f1ba60e2c486eb02e927249&oe=5EE4EC22",
-          "contentUrl": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/p960x960/93974846_1979525622178242_3989847089805787136_o.jpg?_nc_cat=1&_nc_sid=85a577&_nc_oc=AQmzBYwz7eSrzf1FS1gp9mWL2lln9eytoj8BXZljuLS3w9zbpHkm9SL_csjPg480IeU&_nc_ht=scontent.fhan2-4.fna&_nc_tp=6&oh=eb8a04073f1ba60e2c486eb02e927249&oe=5EE4EC22"
+          "username": "KienHT",
+          "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/kienht.jpg",
+          "contentUrl": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/kienht.jpg"
         },
         {
           "id": 1,
-          "username": "Vũ Thu Hoài",
-          "userAvatar": "https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/s960x960/94705996_3556214737726722_8334558860236816384_o.jpg?_nc_cat=107&_nc_sid=85a577&_nc_oc=AQlgPPT4mESPaTbjGnY3AbtB1ECIcMVPE3g37qcKN8znUJP_pBPY9WbnsVhqpCOiSuE&_nc_ht=scontent.fhan2-3.fna&_nc_tp=7&oh=71ac871e247b04fe3c10ee56a4f8d68e&oe=5EE58CFD",
-          "contentUrl": "https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/s960x960/94705996_3556214737726722_8334558860236816384_o.jpg?_nc_cat=107&_nc_sid=85a577&_nc_oc=AQlgPPT4mESPaTbjGnY3AbtB1ECIcMVPE3g37qcKN8znUJP_pBPY9WbnsVhqpCOiSuE&_nc_ht=scontent.fhan2-3.fna&_nc_tp=7&oh=71ac871e247b04fe3c10ee56a4f8d68e&oe=5EE58CFD"
+          "username": "Ngọc Trinh",
+          "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/ngoc_trinh.jpg",
+          "contentUrl": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/ngoc_trinh.jpg"
         },
         {
           "id": 2,
-          "username": "Vy Vy Vũ",
-          "userAvatar": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/84405446_2598275920498564_7952027988860600320_n.jpg?_nc_cat=100&_nc_sid=85a577&_nc_oc=AQnS2gukrFsXqZrzbF0ZDAr9yz_QT5tm0Z2FvaGefXVvauXbrJC9y3lZ5MUqEpbx05g&_nc_ht=scontent.fhan2-4.fna&oh=eb09524c94a933dd066c3aeb702b9383&oe=5EE4D211",
-          "contentUrl": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/84405446_2598275920498564_7952027988860600320_n.jpg?_nc_cat=100&_nc_sid=85a577&_nc_oc=AQnS2gukrFsXqZrzbF0ZDAr9yz_QT5tm0Z2FvaGefXVvauXbrJC9y3lZ5MUqEpbx05g&_nc_ht=scontent.fhan2-4.fna&oh=eb09524c94a933dd066c3aeb702b9383&oe=5EE4D211"
+          "username": "Vũ Thu Hoài",
+          "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/vo_thu_hoai.jpg",
+          "contentUrl": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/vo_thu_hoai.jpg"
         },
         {
           "id": 3,
-          "username": "Trinh Van Quyet",
-          "userAvatar": "https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/p960x960/88941104_1067397833634385_2877473241864077312_o.jpg?_nc_cat=102&_nc_sid=85a577&_nc_oc=AQk6SrreJxvsa2Y4H20Mkq97QjqUUa48p7Wm1ut8TAeE4QfbLembs2tZVrw3v5LQ5nw&_nc_ht=scontent.fhan2-1.fna&_nc_tp=6&oh=2c77878ecc0f589de276621cefc0b82c&oe=5EE68560",
-          "contentUrl": "https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/p960x960/88941104_1067397833634385_2877473241864077312_o.jpg?_nc_cat=102&_nc_sid=85a577&_nc_oc=AQk6SrreJxvsa2Y4H20Mkq97QjqUUa48p7Wm1ut8TAeE4QfbLembs2tZVrw3v5LQ5nw&_nc_ht=scontent.fhan2-1.fna&_nc_tp=6&oh=2c77878ecc0f589de276621cefc0b82c&oe=5EE68560"
+          "username": "Vy Vy Vũ",
+          "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/vy_vy_vu.jpg",
+          "contentUrl": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/vy_vy_vu.jpg"
         },
         {
           "id": 4,
-          "username": "Trần Ngọc Bích",
-          "userAvatar": "https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/94179856_1094846804216660_1252716504248483840_n.jpg?_nc_cat=101&_nc_sid=85a577&_nc_oc=AQlJ9elJdiV1yH0ZxT84NBRzSfJVWqvXsUZBVEEJEB9r3DNm5uGIBc0lR6R79dVjB9Q&_nc_ht=scontent.fhan2-1.fna&oh=f4e7b95386faecb1204bcd8199083186&oe=5EE5C5AD",
-          "contentUrl": "https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/94179856_1094846804216660_1252716504248483840_n.jpg?_nc_cat=101&_nc_sid=85a577&_nc_oc=AQlJ9elJdiV1yH0ZxT84NBRzSfJVWqvXsUZBVEEJEB9r3DNm5uGIBc0lR6R79dVjB9Q&_nc_ht=scontent.fhan2-1.fna&oh=f4e7b95386faecb1204bcd8199083186&oe=5EE5C5AD"
+          "username": "Trinh Van Quyet",
+          "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/trinh_van_quyet.jpg",
+          "contentUrl": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/trinh_van_quyet.jpg"
         },
         {
           "id": 5,
-          "username": "Hoàng Mỹ Duyên",
-          "userAvatar": "https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/p960x960/97182946_2604012963174654_6291967951511748608_o.jpg?_nc_cat=109&_nc_sid=110474&_nc_oc=AQnamDZDVjocmvCigx3AHygbKhS-X37znQMdxMWJnUiXNaeAXEkv7wSJpSgXsqXA7Z0&_nc_ht=scontent.fhan2-3.fna&_nc_tp=6&oh=513cd2c4f5ffb5e6eba5de9310195eed&oe=5EE4AD12",
-          "contentUrl": "https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/p960x960/97182946_2604012963174654_6291967951511748608_o.jpg?_nc_cat=109&_nc_sid=110474&_nc_oc=AQnamDZDVjocmvCigx3AHygbKhS-X37znQMdxMWJnUiXNaeAXEkv7wSJpSgXsqXA7Z0&_nc_ht=scontent.fhan2-3.fna&_nc_tp=6&oh=513cd2c4f5ffb5e6eba5de9310195eed&oe=5EE4AD12"
+          "username": "Trần Ngọc Bích",
+          "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/tran_ngoc_bich.jpg",
+          "contentUrl": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/tran_ngoc_bich.jpg"
         },
         {
           "id": 6,
-          "username": "Đinh Hải Yến",
-          "userAvatar": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/75375527_2350987498360135_3023518145861124096_n.jpg?_nc_cat=100&_nc_sid=85a577&_nc_oc=AQnmJvy7YKobcWS7JGmRDa8JsvaIdt7dXVUiJ_Tky6BDs6_5XVlrdKuSPvmxhyi85jY&_nc_ht=scontent.fhan2-4.fna&oh=88eedbda47f924949c488e3b92a78dd6&oe=5EE6925A",
-          "contentUrl": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/75375527_2350987498360135_3023518145861124096_n.jpg?_nc_cat=100&_nc_sid=85a577&_nc_oc=AQnmJvy7YKobcWS7JGmRDa8JsvaIdt7dXVUiJ_Tky6BDs6_5XVlrdKuSPvmxhyi85jY&_nc_ht=scontent.fhan2-4.fna&oh=88eedbda47f924949c488e3b92a78dd6&oe=5EE6925A"
+          "username": "Hoàng Mỹ Duyên",
+          "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/hoang_my_duyen.jpg",
+          "contentUrl": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/hoang_my_duyen.jpg"
         },
         {
           "id": 7,
-          "username": "Phan Hải Anh",
-          "userAvatar": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/68600281_2891070570908880_529999149009993728_n.jpg?_nc_cat=106&_nc_sid=7aed08&_nc_oc=AQlUlNaAvd9qxMa4wIblwGyD8UlYIOSBb0mpLk-EB8XeGF6cYkmR9XkVIWJrvHl978Y&_nc_ht=scontent.fhan2-2.fna&oh=dc1d77a83dd248847ba4213def00f6c0&oe=5EE4C831",
-          "contentUrl": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/68600281_2891070570908880_529999149009993728_n.jpg?_nc_cat=106&_nc_sid=7aed08&_nc_oc=AQlUlNaAvd9qxMa4wIblwGyD8UlYIOSBb0mpLk-EB8XeGF6cYkmR9XkVIWJrvHl978Y&_nc_ht=scontent.fhan2-2.fna&oh=dc1d77a83dd248847ba4213def00f6c0&oe=5EE4C831"
+          "username": "Đinh Hải Yến",
+          "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/dinh_hai_yen.jpg",
+          "contentUrl": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/dinh_hai_yen.jpg"
         },
         {
           "id": 8,
-          "username": "Vũ Ngọc Anh",
-          "userAvatar": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/86993114_2576324822478634_6732709669996855296_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQkh0mrB0SxWmLVMBDAoNkJU-_wHvvoL-Y_XhwYW2OsU26DotiXe51vWrgF_kVHTAAI&_nc_ht=scontent.fhan2-2.fna&oh=cb42681131a5c50173d4017c055a2ba4&oe=5EE68535",
-          "contentUrl": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/86993114_2576324822478634_6732709669996855296_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQkh0mrB0SxWmLVMBDAoNkJU-_wHvvoL-Y_XhwYW2OsU26DotiXe51vWrgF_kVHTAAI&_nc_ht=scontent.fhan2-2.fna&oh=cb42681131a5c50173d4017c055a2ba4&oe=5EE68535"
+          "username": "Phan Hải Anh",
+          "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/phan_hai_anh.jpg",
+          "contentUrl": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/phan_hai_anh.jpg"
         },
         {
           "id": 9,
-          "username": "Huyền Thạch",
-          "userAvatar": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/s960x960/87962464_1396775000493736_885635514999242752_o.jpg?_nc_cat=111&_nc_sid=7aed08&_nc_oc=AQmpXevKfcw2bUIZbWB_eq4azpNlqLZkDbuveyt4MEJnsmkEdgzHNNryrLF_GLVx0s0&_nc_ht=scontent.fhan2-2.fna&_nc_tp=7&oh=31decaa86d4ef9caebf9dc82ff28f34b&oe=5EE601E2",
-          "contentUrl": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/s960x960/87962464_1396775000493736_885635514999242752_o.jpg?_nc_cat=111&_nc_sid=7aed08&_nc_oc=AQmpXevKfcw2bUIZbWB_eq4azpNlqLZkDbuveyt4MEJnsmkEdgzHNNryrLF_GLVx0s0&_nc_ht=scontent.fhan2-2.fna&_nc_tp=7&oh=31decaa86d4ef9caebf9dc82ff28f34b&oe=5EE601E2"
+          "username": "Vũ Ngọc Anh",
+          "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/vu_ngoc_anh.jpg",
+          "contentUrl": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/vu_ngoc_anh.jpg"
         },
         {
           "id": 10,
+          "username": "Huyền Thạch",
+          "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/huyen_thach.jpg",
+          "contentUrl": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/huyen_thach.jpg"
+        },
+        {
+          "id": 11,
           "username": "Vũ Ngọc Châm",
-          "userAvatar": "https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/80266535_3358070187601447_5307574186141548544_n.jpg?_nc_cat=102&_nc_sid=85a577&_nc_oc=AQmtxY2WbxS85I9JW7D35-78JjShV1o4xb82WPKz4ZSJzrY3nHhGIdKUBaDFexMze1A&_nc_ht=scontent.fhan2-1.fna&oh=d330c07c67ae27220d4395c9cb9dd97d&oe=5EE4D95F",
-          "contentUrl": "https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/80266535_3358070187601447_5307574186141548544_n.jpg?_nc_cat=102&_nc_sid=85a577&_nc_oc=AQmtxY2WbxS85I9JW7D35-78JjShV1o4xb82WPKz4ZSJzrY3nHhGIdKUBaDFexMze1A&_nc_ht=scontent.fhan2-1.fna&oh=d330c07c67ae27220d4395c9cb9dd97d&oe=5EE4D95F"
+          "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/vu_ngoc_cham.jpg",
+          "contentUrl": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/vu_ngoc_cham.jpg"
         }
       ]
     },
@@ -76,10 +82,10 @@
       "id": 2,
       "type": "POST",
       "post": {
-        "id": 8,
+        "id": 0,
         "type": "TEXT",
         "username": "Phan Mạnh Quỳnh",
-        "userAvatar": "https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/22406335_881637648679269_5709333535960309312_n.jpg?_nc_cat=102&_nc_sid=85a577&_nc_oc=AQmt36YUmGvUACLhNQnkKbHZpbHuYAG9z7WtTaMtcSrONmCWXMZK8hnWJJcv8-2qAio&_nc_ht=scontent.fhan2-1.fna&oh=9e894be4d9b989c8dfc8879708a342af&oe=5EE4D84C",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/phan_manh_quynh.jpg",
         "time": "Vừa xong",
         "content": "Có chàng trai viết lên cây.Lời yêu thương cô gái ấy.Mối tình như gió như mây.Nhiều năm trôi qua vẫn thấy.Giống như bức tranh vẽ bằng dịu êm ngày thơ. Có khi trong tiềm thức ngỡ là mơ...",
         "likeCount": "5.8K",
@@ -94,11 +100,11 @@
         "id": 1,
         "type": "IMAGE",
         "username": "KienHT",
-        "userAvatar": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/88970319_2805039096243451_3784099829701935104_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQlN0nHIq3zK8_R7fKmssVeXuY9gO5QKVKDpK0bIJXLthOxqsr65Mr7gdrYQa5KgwG8&_nc_ht=scontent.fhan2-2.fna&oh=509bd66f0b376446b79a3072d5cb04af&oe=5EE65222",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/kienht.jpg",
         "time": "Vừa xong",
         "content": "Gapo Dashboard Demo",
         "images": [
-          "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/88970319_2805039096243451_3784099829701935104_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQlN0nHIq3zK8_R7fKmssVeXuY9gO5QKVKDpK0bIJXLthOxqsr65Mr7gdrYQa5KgwG8&_nc_ht=scontent.fhan2-2.fna&oh=509bd66f0b376446b79a3072d5cb04af&oe=5EE65222"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/kienht.jpg"
         ],
         "likeCount": "18K",
         "commentCount": "5K",
@@ -109,10 +115,10 @@
       "id": 4,
       "type": "POST",
       "post": {
-        "id": 0,
+        "id": 2,
         "type": "TEXT",
         "username": "Nguyễn Kiều My",
-        "userAvatar": "https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/90710733_3157135447653486_6473147607840456704_n.jpg?_nc_cat=102&_nc_sid=85a577&_nc_oc=AQk_Om3lz4JuANpR-bVXBg8IP57VTi73jXZoHoYjyKsAg4CsBWkBS7FWlOAGrcuOx5I&_nc_ht=scontent.fhan2-1.fna&oh=0fac524f1cef775d953a38531519db65&oe=5EE",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/nguyen_kieu_my.jpg",
         "time": "1 hr",
         "content": "Hạnh phúc không tự thân đến với bất kỳ ai, hạnh phúc là thành quả của sự vận động của con người, bạn phải làm thì mới có được hạnh phúc bởi vậy khi bạn có công việc để là và đam mê công việc đó là điều hạnh phúc. Một cô gái đam mê công việc giảng dạy cô cố gắng làm việc, học tập để trở thành người giáo viên và rồi cô có được công việc giảng dạy đó là hạnh phúc – trong cuộc đời của người giáo viên thật sự yêu nghề giáo thì công việc chính là điều hạnh phúc nhất. Một ông bác sĩ yêu nghề, hạnh phúc lớn nhất của ông ấy là được cứu người, thậm chí một người lao động chân tay khuân vác nặng nhọc, hạnh phúc của họ là mong muốn ngày nào cũng có công việc để làm.",
         "likeCount": "11.8K",
@@ -127,7 +133,7 @@
         "id": 3,
         "type": "VIDEO",
         "username": "KienHT",
-        "userAvatar": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/88970319_2805039096243451_3784099829701935104_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQlN0nHIq3zK8_R7fKmssVeXuY9gO5QKVKDpK0bIJXLthOxqsr65Mr7gdrYQa5KgwG8&_nc_ht=scontent.fhan2-2.fna&oh=509bd66f0b376446b79a3072d5cb04af&oe=5EE65222",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/kienht.jpg",
         "time": "Yesterday at 18:18",
         "content": "Gapo Dashboard Video Type Demo.",
         "video": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
@@ -140,12 +146,15 @@
       "id": 6,
       "type": "POST",
       "post": {
-        "id": 0,
+        "id": 4,
         "type": "TEXT",
         "username": "Nguyễn Lan Phương",
-        "userAvatar": "https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-0/p640x640/75464390_2492007917580811_1936900795886731264_o.jpg?_nc_cat=102&_nc_sid=85a577&_nc_oc=AQlfjl4FwXshhRhFTkXuwfhQuay-5i2PKOOSVRNnA3TNYTpLIa02vVYCHBKilGQda2w&_nc_ht=scontent.fhan2-1.fna&_nc_tp=6&oh=003dda774c8d143222575f5d3fa41cdd&oe=5EE65E68",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/nguyen_lan_phuong.jpg",
         "time": "1 hr",
         "content": "Thanh xuân là tuổi đẹp nhất của cuộc đời chúng ta Hãy cảm nhận theo cách riêng của bạn 😝",
+        "images": [
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_0.jpg"
+        ],
         "likeCount": "69",
         "commentCount": "210",
         "shareCount": "34"
@@ -158,67 +167,67 @@
         {
           "id": 0,
           "friendName": "Mai Thu Hiền",
-          "friendAvatar": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/88036149_3149038481773113_5320116053286584320_n.jpg?_nc_cat=105&_nc_sid=85a577&_nc_oc=AQmLDXj1KNYplWdRCJBiEgc7P0GcfHfbBtD8Gzq0eT0OwvOyxwwzM76e7EtBH0_rUtw&_nc_ht=scontent.fhan2-4.fna&oh=f5c36386208c740e536eee7748c39f41&oe=5EE450CA",
+          "friendAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/mai_thu_hien.jpg",
           "mutualFriendsCount": 69
         },
         {
           "id": 1,
           "friendName": "Huyền Thanh Chu Thị",
-          "friendAvatar": "https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/p960x960/61652509_819564798442397_8345115949979926528_o.jpg?_nc_cat=108&_nc_sid=7aed08&_nc_oc=AQk-Gl3R27ECUd6nAOkXbkWYnLKKOq1XeeCM1XSo9D9BRdCHtxlHK7iHzXE7YUb9O38&_nc_ht=scontent.fhan2-3.fna&_nc_tp=6&oh=183eb94c7a6a4419ad0a72d3ae235997&oe=5EE64AE7",
+          "friendAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/huyen_thanh_chu_thi.jpg",
           "mutualFriendsCount": 98
         },
         {
           "id": 2,
           "friendName": "Tinh Pham",
-          "friendAvatar": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/p960x960/93412173_228494071805005_6734183350585524224_o.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQkIdZxxzdrmG7EMIf-wN5WbTohJ7QZ-guPZMgwH1wIUM-4cb17CMSK-9YsCrQ_5XY0&_nc_ht=scontent.fhan2-2.fna&_nc_tp=6&oh=5ef8fa96c90ca02194ac76019de98297&oe=5EE4B61B",
+          "friendAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/tinh_pham.jpg",
           "mutualFriendsCount": 34
         },
         {
           "id": 3,
           "friendName": "Trần Oanh",
-          "friendAvatar": "https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/p960x960/46459376_1125985677562632_3265537749104459776_o.jpg?_nc_cat=102&_nc_sid=7aed08&_nc_oc=AQnDLpqSZbLUvyPxSz-o-Mn-S1s9kMO5v_0b92dwXj6SNJBByw-vc0xNSORxhqMAH-w&_nc_ht=scontent.fhan2-1.fna&_nc_tp=6&oh=80f9e1c9869a5a1d19b5b54108f19356&oe=5EE4DAB4",
+          "friendAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/tran_oanh.jpg",
           "mutualFriendsCount": 56
         },
         {
           "id": 4,
           "friendName": "Nguyễn Kim Nga",
-          "friendAvatar": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/83760149_613461932817342_3634940760882675712_n.jpg?_nc_cat=104&_nc_sid=7aed08&_nc_oc=AQmKRTv9OHY5kxmtHvRQfNpLE_XPmHlb5VlbApqq2w8a9ej5VsxRVcUtnConn4n30yU&_nc_ht=scontent.fhan2-4.fna&oh=436cf2edfa132f2a5a778dbfb7970fb5&oe=5EE41651",
+          "friendAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/kim_nga.jpg",
           "mutualFriendsCount": 78
         },
         {
           "id": 5,
           "friendName": "Nguyễn Phương Trang",
-          "friendAvatar": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/p960x960/76612163_2503029553142706_5214753968575479808_o.jpg?_nc_cat=104&_nc_sid=85a577&_nc_oc=AQmGbx5RgJ-HJf7ffl2tGRalo5wK1Jfu3WQjobI2noCw-q3DC0bmigH1GrdCgsmHsk4&_nc_ht=scontent.fhan2-4.fna&_nc_tp=6&oh=bd4cbd8eee06b3d3954e8bef395256cf&oe=5EE3CFCD",
+          "friendAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/phuong_trang.jpg",
           "mutualFriendsCount": 87
         },
         {
           "id": 6,
           "friendName": "Bùi Bích Phương",
-          "friendAvatar": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/95961443_3057182230971324_6441649838110015488_n.jpg?_nc_cat=1&_nc_sid=85a577&_nc_oc=AQlLRLgIe2_G6xDlxF204aL5OqR3KK208n5wWIuUILZkFK-UsNKUJdCwHgEesyptMmE&_nc_ht=scontent.fhan2-4.fna&oh=97f112c911db6b0f1c3965f27f13b0f7&oe=5EE70DB0",
+          "friendAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/bui_bich_phuong.jpg",
           "mutualFriendsCount": 65
         },
         {
           "id": 7,
           "friendName": "Ngọc Trinh        ",
-          "friendAvatar": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/p960x960/93974846_1979525622178242_3989847089805787136_o.jpg?_nc_cat=1&_nc_sid=85a577&_nc_oc=AQmzBYwz7eSrzf1FS1gp9mWL2lln9eytoj8BXZljuLS3w9zbpHkm9SL_csjPg480IeU&_nc_ht=scontent.fhan2-4.fna&_nc_tp=6&oh=eb8a04073f1ba60e2c486eb02e927249&oe=5EE4EC22",
+          "friendAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/ngoc_trinh.jpg",
           "mutualFriendsCount": 43
         },
         {
           "id": 8,
           "friendName": "Trần Thu Hương",
-          "friendAvatar": "https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/70632333_10213495674738940_4802811504753639424_n.jpg?_nc_cat=107&_nc_sid=85a577&_nc_oc=AQmNGRFu71FFCPx5gRp90ezQ3mNta36ogYuFLwh99P81nS88_7qr-PtCd7s3unGuis4&_nc_ht=scontent.fhan2-3.fna&oh=7d89c9283553dc9a9e018bbf56169205&oe=5EE70109",
+          "friendAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/tran_thu_huong.jpg",
           "mutualFriendsCount": 21
         },
         {
           "id": 9,
           "friendName": "Tâm Vũ Minh",
-          "friendAvatar": "https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/95664496_592106384997521_4102792373069676544_n.jpg?_nc_cat=103&_nc_sid=85a577&_nc_oc=AQneJg6yEZDWZjWSTwaXGWum8SAY8fvI30ta96fpkhmFXILY-8L6sJ7P-7nE1mYDn_c&_nc_ht=scontent.fhan2-1.fna&oh=794ff113da777491b63024c40277b6a7&oe=5EE62777",
+          "friendAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/tam_vu_minh.jpg",
           "mutualFriendsCount": 69
         },
         {
           "id": 10,
           "friendName": "Nguyễn Mỹ Hạnh",
-          "friendAvatar": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/69627247_10156833973403661_949636579318562816_n.jpg?_nc_cat=105&_nc_sid=85a577&_nc_oc=AQmKDUkOKOVA8b-q2yJAclq58Rky1G_DGDokJiKwn0FFmfhYPlMSUfgWfVdCsc8N6Bw&_nc_ht=scontent.fhan2-4.fna&oh=34e7a7902425db370de804d21bdac650&oe=5EE4BA59",
+          "friendAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/nguyen_my_hanh.jpg",
           "mutualFriendsCount": 96
         }
       ]
@@ -227,10 +236,10 @@
       "id": 8,
       "type": "POST",
       "post": {
-        "id": 9,
+        "id": 5,
         "type": "TEXT",
         "username": "Trần Thu Hương",
-        "userAvatar": "https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/70632333_10213495674738940_4802811504753639424_n.jpg?_nc_cat=107&_nc_sid=85a577&_nc_oc=AQmNGRFu71FFCPx5gRp90ezQ3mNta36ogYuFLwh99P81nS88_7qr-PtCd7s3unGuis4&_nc_ht=scontent.fhan2-3.fna&oh=7d89c9283553dc9a9e018bbf56169205&oe=5EE70109",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/tran_thu_huong.jpg",
         "time": "1 giờ",
         "content": "Không có phụ nữ xấu, chỉ có phụ nữ không biết làm đẹp”. Các chị em đừng lo da đen sạm dùng nhiều phương pháp mà vẫn chưa cải thiện nhé.",
         "likeCount": "1.2K",
@@ -242,15 +251,12 @@
       "id": 9,
       "type": "POST",
       "post": {
-        "id": 10,
+        "id": 6,
         "type": "VIDEO",
         "username": "KienHT",
-        "userAvatar": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/88970319_2805039096243451_3784099829701935104_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQlN0nHIq3zK8_R7fKmssVeXuY9gO5QKVKDpK0bIJXLthOxqsr65Mr7gdrYQa5KgwG8&_nc_ht=scontent.fhan2-2.fna&oh=509bd66f0b376446b79a3072d5cb04af&oe=5EE65222",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/kienht.jpg",
         "time": "Yesterday at 18:18",
         "content": "Gapo Dashboard Demo Video.2",
-        "images": [
-          "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/88970319_2805039096243451_3784099829701935104_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQlN0nHIq3zK8_R7fKmssVeXuY9gO5QKVKDpK0bIJXLthOxqsr65Mr7gdrYQa5KgwG8&_nc_ht=scontent.fhan2-2.fna&oh=509bd66f0b376446b79a3072d5cb04af&oe=5EE65222"
-        ],
         "video": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
         "likeCount": "30K",
         "commentCount": "6.1K",
@@ -261,14 +267,14 @@
       "id": 10,
       "type": "POST",
       "post": {
-        "id": 11,
+        "id": 7,
         "type": "IMAGE",
         "username": "Nguyễn Mỹ Hạnh",
-        "userAvatar": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/88970319_2805039096243451_3784099829701935104_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQlN0nHIq3zK8_R7fKmssVeXuY9gO5QKVKDpK0bIJXLthOxqsr65Mr7gdrYQa5KgwG8&_nc_ht=scontent.fhan2-2.fna&oh=509bd66f0b376446b79a3072d5cb04af&oe=5EE65222",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/nguyen_my_hanh.jpg",
         "time": "Yesterday at 18:18",
         "content": "Đưa tay lên nàoo..mãi bên nhao bạn nhớ 😘😘",
         "images": [
-          "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/s960x960/97091731_10157602683028661_6672361638571540480_o.jpg?_nc_cat=106&_nc_sid=110474&_nc_oc=AQkowBwv0z4jz4NqewRcZH6U_P8lSt2B1iEiusPe8-_mzGl1HmFKzpXSP1pipq6SN5Y&_nc_ht=scontent.fhan2-2.fna&_nc_tp=7&oh=c46474b8158ebc5022e608841f466bb9&oe=5EE442B6"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_11.jpg"
         ],
         "likeCount": "10K",
         "commentCount": "6K",
@@ -279,10 +285,10 @@
       "id": 11,
       "type": "POST",
       "post": {
-        "id": 12,
+        "id": 8,
         "type": "TEXT",
         "username": "Tuan Hung Nguyen",
-        "userAvatar": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/91728798_10158181792297380_273796820725923840_n.jpg?_nc_cat=1&_nc_sid=85a577&_nc_oc=AQlfeqVjJCZ2jBSmpfP0jTJ1vRfFqlXNATuL2XUNOCUQpv_k3PeBJLi1lY5mYg9OUFA&_nc_ht=scontent.fhan2-4.fna&oh=c950aa73c44c53f6c4f250df7fef5517&oe=5EE73A36",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/tuan_hung.jpg",
         "time": "3 hr",
         "content": "Cái kết của: Ở nhà lâu ngày không ra đường dễ dẫn đến tư tưởng thèm đủ mọi thứ. Gặp nhau giữa núi rừng Tây Nguyên chuyện gì xảy ra thì đã xảy ra rồi.",
         "likeCount": "1.8K",
@@ -294,15 +300,12 @@
       "id": 12,
       "type": "POST",
       "post": {
-        "id": 13,
+        "id": 9,
         "type": "VIDEO",
         "username": "KienHT",
-        "userAvatar": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/88970319_2805039096243451_3784099829701935104_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQlN0nHIq3zK8_R7fKmssVeXuY9gO5QKVKDpK0bIJXLthOxqsr65Mr7gdrYQa5KgwG8&_nc_ht=scontent.fhan2-2.fna&oh=509bd66f0b376446b79a3072d5cb04af&oe=5EE65222",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/story/kienht.jpg",
         "time": "Yesterday at 18:18",
         "content": "Gapo Dashboard Demo Video 3",
-        "images": [
-          "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/88970319_2805039096243451_3784099829701935104_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQlN0nHIq3zK8_R7fKmssVeXuY9gO5QKVKDpK0bIJXLthOxqsr65Mr7gdrYQa5KgwG8&_nc_ht=scontent.fhan2-2.fna&oh=509bd66f0b376446b79a3072d5cb04af&oe=5EE65222"
-        ],
         "video": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
         "likeCount": "90K",
         "commentCount": "4.2K",
@@ -313,10 +316,10 @@
       "id": 13,
       "type": "POST",
       "post": {
-        "id": 14,
+        "id": 10,
         "type": "TEXT",
         "username": "Tuyet Loan Nguyen",
-        "userAvatar": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/88970319_2805039096243451_3784099829701935104_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQlN0nHIq3zK8_R7fKmssVeXuY9gO5QKVKDpK0bIJXLthOxqsr65Mr7gdrYQa5KgwG8&_nc_ht=scontent.fhan2-2.fna&oh=509bd66f0b376446b79a3072d5cb04af&oe=5EE65222",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/tuyet_loan_nguyen.jpg",
         "time": "1 hr",
         "content": "Sương sương xuống phố...☺️ Phố đông quá nên thôi đi dzìa 🤣",
         "likeCount": "1.1K",
@@ -328,14 +331,14 @@
       "id": 14,
       "type": "POST",
       "post": {
-        "id": 15,
+        "id": 11,
         "type": "IMAGE",
         "username": "Thang Binh Trinh",
-        "userAvatar": "https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/70739990_10212190322673673_4963680535617470464_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_oc=AQl89m-zaoHbwzjerJjJ-jkCmBYr0psfhwTLB-yXa6DTbXvtJyHY6r9liDL1ktGHBAU&_nc_ht=scontent.fhan2-3.fna&oh=c763fbea59a7038ef546b47516299a31&oe=5EE5E10A",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/trinh_thang_binh.jpg",
         "time": "1 giờ",
         "content": "Sau mùa dịch ta có gì??? ♟♟♟",
         "images": [
-          "https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/s960x960/96094443_10213758732442937_1782813342289625088_o.jpg?_nc_cat=109&_nc_sid=dd7718&_nc_oc=AQk-YAiClDBjpEbeSmSL8Lap5Ajckgvl8MleLOyyAySJz0G1hqWNsUgQc0qYyEYTqeM&_nc_ht=scontent.fhan2-3.fna&_nc_tp=7&oh=a72a13b0d5719fc207c005af3cc7685c&oe=5EE4A94B"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_15.jpg"
         ],
         "likeCount": "1.8K",
         "commentCount": "696",
@@ -346,14 +349,14 @@
       "id": 15,
       "type": "POST",
       "post": {
-        "id": 16,
+        "id": 12,
         "type": "IMAGE",
         "username": "Tuyet Loan Nguyen",
-        "userAvatar": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/88970319_2805039096243451_3784099829701935104_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQlN0nHIq3zK8_R7fKmssVeXuY9gO5QKVKDpK0bIJXLthOxqsr65Mr7gdrYQa5KgwG8&_nc_ht=scontent.fhan2-2.fna&oh=509bd66f0b376446b79a3072d5cb04af&oe=5EE65222",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/tuyet_loan_nguyen.jpg",
         "time": "9 tháng 5 lúc 19:07",
         "content": "Bạn sẽ làm gì khi ở nhà 🏡?",
         "images": [
-          "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/s960x960/96381208_10158320214218838_3820365910779101184_o.jpg?_nc_cat=110&_nc_sid=110474&_nc_oc=AQkxcHyEc_Fa4onx0lj4XFp1sfL4zuSsy5kIdqFZoyzHtvyY8uNAjHLTm7nQ3nPsIUM&_nc_ht=scontent.fhan2-4.fna&_nc_tp=7&oh=a6f98808b13e0f445e34191db5e0d948&oe=5EE4F960"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_16.jpg"
         ],
         "likeCount": "11.8K",
         "commentCount": "996",
@@ -364,14 +367,14 @@
       "id": 16,
       "type": "POST",
       "post": {
-        "id": 17,
+        "id": 13,
         "type": "TEXT",
         "username": "Nguyễn Mỹ Hạnh",
-        "userAvatar": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/69627247_10156833973403661_949636579318562816_n.jpg?_nc_cat=105&_nc_sid=85a577&_nc_oc=AQmKDUkOKOVA8b-q2yJAclq58Rky1G_DGDokJiKwn0FFmfhYPlMSUfgWfVdCsc8N6Bw&_nc_ht=scontent.fhan2-4.fna&oh=34e7a7902425db370de804d21bdac650&oe=5EE4BA59",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/nguyen_my_hanh.jpg",
         "time": "15 giờ",
         "content": "“ 14/2 thì bằng 7. 24/7 thì lúc nào cũng muốn ăn “ 🤪🤪",
         "images": [
-          "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/s960x960/95884311_10157578847623661_3355384191444320256_o.jpg?_nc_cat=105&_nc_sid=110474&_nc_oc=AQkf8XLsg2p3nlORhYE8PbPhqkiqpJ0T7mq7NjXZrqkkeHn-uAB3SUbj9I0ickGyp2g&_nc_ht=scontent.fhan2-4.fna&_nc_tp=7&oh=d6a7f97da3fe70d3d7589ebea92e9266&oe=5EE4DB21"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_17.jpg"
         ],
         "likeCount": "2.8K",
         "commentCount": "396",
@@ -382,12 +385,12 @@
       "id": 17,
       "type": "POST",
       "post": {
-        "id": 18,
+        "id": 14,
         "type": "TEXT",
         "username": "Beatvn",
-        "userAvatar": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/p960x960/84873645_2490611287922884_839444202587684864_o.png?_nc_cat=1&_nc_sid=85a577&_nc_oc=AQmvxAmXsg5mP45MPK9-XU3lyGsG7gLbi5tkd3eG_E2JPUr6qXKKz5BGeKy0wg678u8&_nc_ht=scontent.fhan2-4.fna&oh=3e06f38fd1e2024caa8848ec5c038da3&oe=5EE3F2F0",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/beat_vn.jpg",
         "time": "2 tháng 5 lúc 15:20",
-        "content": "HÀNG LOẠT SINH VIÊN BỊ MẤT ĐỒ CÓ GIÁ TRỊ SAU KHI KTX ĐHQG TPHCM TRỞ THÀNH KHU CÁCH LY TẬP TRUNG. Trong 2 tuần vừa qua, các bạn sinh viên ở kí túc xá khu A và khu B đã trở lại kí túc xá sau kỳ nghỉ tết lịch sử. Đây cũng là hai khu được UBND TPHCM trưng dụng làm khu cách ly tập trung trong diễn biến của dịch Covid-19. Trước đó BQL kí túc xá đã thông báo rất gấp rút cho sinh viên và huy động sinh viên KHÔNG QUAY LẠI KTX LẤY ĐỒ đồng thời ra rất nhiều văn bản cam kết cũng như thư ngỏ sẽ đảm bảo đồ dùng cá nhân cho sinh viên. Có những bạn vì không kịp lên lấy mà đành để lại những vật dụng có giá trị như laptop, đồng hồ, giày, thiết bị điện tử,.. Tuy nhiên, sau khi trở lại kí túc xá, đồ đạc của sinh viên đều không cánh mà bay. Ngoài những đồ đạc giá trị, đa số các nhu yếu phẩm hằng ngày cũng biến mất. Các tủ bị cạy, bẻ khoá nhằm lấy đồ bên trong và để lại hộp/vỏ :)))). Hiện nay các bạn sinh viên ở ktx khu A và khu B đều đang rất bức xúc, hằng ngày đều có cập nhật tình trạng mất đồ trong group ktx. Đến nay, đã qua 2 tuần sau tình trạng mất đồ nhưng BQL KTX vẫn chưa đưa ra được phương án giải quyết.",
+        "content": "HÀNG LOẠT SINH VIÊN BỊ MẤT ĐỒ CÓ GIÁ TRỊ SAU KHI KTX ĐHQG TPHCM TRỞ THÀNH KHU CÁCH LY TẬP TRUNG. Trong 2 tuần vừa qua, các bạn sinh viên ở kí túc xá khu A và khu B đã trở lại kí túc xá sau kỳ nghỉ tết lịch sử. Đây cũng là hai khu được UBND TPHCM trưng dụng làm khu cách ly tập trung trong diễn biến của dịch Covid-19. Trước đó BQL kí túc xá đã thông báo rất gấp rút cho sinh viên và huy động sinh viên KHÔNG QUAY LẠI KTX LẤY ĐỒ đồng thời ra rất nhiều văn bản cam kết cũng như thư ngỏ sẽ đảm bảo đồ dùng cá nhân cho sinh viên. Có những bạn vì không kịp lên lấy mà đành để lại những vật dụng có giá trị như laptop, đồng hồ, giày, thiết bị điện tử,.. Tuy nhiên, sau khi trở lại kí túc xá, đồ đạc của sinh viên đều không cánh mà bay. Ngoài những đồ đạc giá trị, đa số các nhu yếu phẩm hằng ngày cũng biến mất. Các tủ bị cạy, bẻ khoá nhằm lấy đồ bên trong và để lại hộp/vỏ :)))) Hiện nay các bạn sinh viên ở ktx khu A và khu B đều đang rất bức xúc, hằng ngày đều có cập nhật tình trạng mất đồ trong group ktx. Đến nay, đã qua 2 tuần sau tình trạng mất đồ nhưng BQL KTX vẫn chưa đưa ra được phương án giải quyết.",
         "likeCount": "6.8K",
         "commentCount": "1996",
         "shareCount": "423"
@@ -397,14 +400,14 @@
       "id": 18,
       "type": "POST",
       "post": {
-        "id": 19,
+        "id": 15,
         "type": "IMAGE",
         "username": "Tuyet Loan Nguyen",
-        "userAvatar": "https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/88970319_2805039096243451_3784099829701935104_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_oc=AQlN0nHIq3zK8_R7fKmssVeXuY9gO5QKVKDpK0bIJXLthOxqsr65Mr7gdrYQa5KgwG8&_nc_ht=scontent.fhan2-2.fna&oh=509bd66f0b376446b79a3072d5cb04af&oe=5EE65222",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/tuyet_loan_nguyen.jpg",
         "time": "10 tháng 5 lúc 21:23",
         "content": "Tự do-hạnh phúc! Ở đây và bây giờ ❤️",
         "images": [
-          "https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/69773304_10157542578133838_4645711638404530176_n.jpg?_nc_cat=107&_nc_sid=7aed08&_nc_oc=AQn0S9oPoLVBnDqLJZJjOKZgFnCh7jR7DbEVfJPk1TioiDlj0Nv8LYzbLRRtYqUQmGg&_nc_ht=scontent.fhan2-3.fna&oh=6b466acddc3e80d37abf5e14cf3bfb7c&oe=5EE6EDEA"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_19.jpg"
         ],
         "likeCount": "8.2K",
         "commentCount": "1296",
@@ -415,14 +418,14 @@
       "id": 19,
       "type": "POST",
       "post": {
-        "id": 20,
+        "id": 16,
         "type": "IMAGE",
         "username": "Nguyen Xuan Lan",
-        "userAvatar": "https://scontent.fhan2-3.fna.fbcdn.net/v/t1.0-9/75258486_10156925865899624_1039695210222714880_n.jpg?_nc_cat=108&_nc_sid=7aed08&_nc_oc=AQlvtATqlQK3kntJa31ZY_fNjg_ml1KGQu8mQm9KZ1dO06mfgCUZxE01pjRaQS-CFz0&_nc_ht=scontent.fhan2-3.fna&oh=966daa781fabf2c875c1a3948e888bdc&oe=5EE4FDF5",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/xuan_lan.jpg",
         "time": "12 giờ",
         "content": "Trước khi bạn yêu thương nhân loại thì bạn hãy yêu thương gia đình mình ❤️❤️❤️",
         "images": [
-          "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/81202118_10157104674274624_5611612618922917888_n.jpg?_nc_cat=110&_nc_sid=7aed08&_nc_oc=AQm8USm_63c0VewtJHGaaVVC4rxtGVQMj6QurOY5sHUbkhwCO5PsKLwOtzLa_L8n2IU&_nc_ht=scontent.fhan2-4.fna&oh=90435c9b903efb24b894a4804cb08178&oe=5EE59216"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_20.jpg"
         ],
         "likeCount": "5.8K",
         "commentCount": "259",
@@ -433,14 +436,14 @@
       "id": 20,
       "type": "POST",
       "post": {
-        "id": 21,
+        "id": 17,
         "type": "TEXT",
         "username": "Nguyễn Khoa Tóc Tiên",
-        "userAvatar": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/16427286_1207361302683211_2919716955796215189_n.jpg?_nc_cat=100&_nc_sid=13bebb&_nc_oc=AQn_fbLXZrxlsoMmRAcapWiB7l_fKPeB7gNav3-5Lca-dyyEhT7SLCyVoWacq4b8rqc&_nc_ht=scontent.fhan2-4.fna&oh=671c8a7bea9da875a5802e324e4e80c2&oe=5EE3CD7F",
+        "userAvatar": "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/avatar/toc_tien.jpg",
         "time": "Hôm qua lúc 09:11",
         "content": "Xanh bơ có làm anh lơ mơ🥑🥑🥑",
         "images": [
-          "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/s960x960/96153384_2862043620548296_13871498825564160_o.jpg?_nc_cat=104&_nc_sid=110474&_nc_oc=AQnUpiuRRnbdr1cXdG-MwVSRegZ1Co9CI-y5cB3b0-nxE8io_cncGUOLIFSUhHkT8YQ&_nc_ht=scontent.fhan2-4.fna&_nc_tp=7&oh=74cc1f29f2e7f2af784085fea833fcda&oe=5EE63AA9"
+          "https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/content/post_21.jpg"
         ],
         "likeCount": "8K",
         "commentCount": "1K",
