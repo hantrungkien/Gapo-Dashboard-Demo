@@ -10,9 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kienht.gapo.core.base.BaseFragment
-import com.kienht.gapo.core.common.DataState
-import com.kienht.gapo.dashboard.R
 import com.kienht.gapo.core.utils.TAG
+import com.kienht.gapo.dashboard.R
 import com.kienht.gapo.dashboard.databinding.NewsFeedFragmentBinding
 import com.kienht.gapo.dashboard.news_feed.adapter.NewsFeedAdapter
 import com.kienht.gapo.dashboard.news_feed.adapter.OnClickPostItemListener
@@ -57,19 +56,6 @@ class NewsFeedFragment : BaseFragment<NewsFeedFragmentBinding>(), OnClickPostIte
                 adapter = NewsFeedAdapter(viewLifecycleOwner, pool, this@NewsFeedFragment)
             }
         }
-
-        newsFeedViewModel.dataState
-            .observe(viewLifecycleOwner, Observer {
-                when (it) {
-                    is DataState.SUCCESS<List<NewsFeedViewData>> -> {
-                        Log.e(TAG, "SUCCESS: ${it.data.size}")
-                    }
-                    is DataState.ERROR -> {
-                        Log.e(TAG, "ERROR: ", it.throwable)
-                    }
-                }
-            })
-        newsFeedViewModel.fetch()
     }
 
     override fun onClickPost(post: NewsFeedViewData, position: Int) {

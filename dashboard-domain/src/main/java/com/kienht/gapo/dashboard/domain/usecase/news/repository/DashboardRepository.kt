@@ -1,6 +1,7 @@
 package com.kienht.gapo.dashboard.domain.usecase.news.repository
 
 import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeed
+import kotlinx.coroutines.flow.Flow
 
 /**
  * @author kienht
@@ -9,6 +10,6 @@ import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeed
  */
 interface DashboardRepository {
 
-    suspend fun fetchNewsFeeds(): List<NewsFeed>
+    fun newsFeedsFlow(): Flow<List<NewsFeed>>
 
 }

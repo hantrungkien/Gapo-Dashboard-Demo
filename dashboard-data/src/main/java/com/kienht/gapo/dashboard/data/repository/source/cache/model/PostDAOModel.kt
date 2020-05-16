@@ -1,5 +1,7 @@
 package com.kienht.gapo.dashboard.data.repository.source.cache.model
 
+import com.kienht.gapo.dashboard.domain.usecase.news.model.Post
+
 /**
  * @author kienht
  * @company OICSoft
@@ -17,4 +19,32 @@ data class PostDAOModel(
     val likeCount: String,
     val commentCount: String,
     val shareCount: String
+)
+
+internal fun PostDAOModel?.mapToDomain() = if (this == null) null else Post(
+    id,
+    Post.Type.get(type),
+    username,
+    userAvatar,
+    time,
+    content,
+    images,
+    video,
+    likeCount,
+    commentCount,
+    shareCount
+)
+
+internal fun Post?.mapToCached() = if (this == null) null else PostDAOModel(
+    id,
+    type.value(),
+    username,
+    userAvatar,
+    time,
+    content,
+    images,
+    video,
+    likeCount,
+    commentCount,
+    shareCount
 )

@@ -93,7 +93,7 @@
         <ImageView
             android:id="@+id/image_content"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_320dp"
+            android:layout_height="@dimen/_400dp"
             android:layout_below="@+id/text_content"
             android:layout_marginTop="@dimen/_10dp"
             android:background="@android:color/darker_gray"

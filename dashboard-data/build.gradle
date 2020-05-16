@@ -53,6 +53,7 @@ dependencies {
     implementation deps.kotlin.stdlibJdk8
     implementation deps.kotlin.coroutines.coroutines
 
+    implementation deps.androidx.coreKtx
     implementation deps.retrofit.retrofit
     implementation deps.retrofit.converterMoshi
     implementation deps.retrofit.rxjava2
