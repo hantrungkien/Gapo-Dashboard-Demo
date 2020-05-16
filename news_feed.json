@@ -147,7 +147,7 @@
       "type": "POST",
       "post": {
         "id": 4,
-        "type": "TEXT",
+        "type": "IMAGE",
         "username": "Nguyễn Lan Phương",
         "userAvatar": "https://i.ibb.co/TvTHvYb/avatar-nguyen-lan-phuong.jpg",
         "time": "1 hr",
@@ -254,7 +254,7 @@
         "id": 6,
         "type": "VIDEO",
         "username": "KienHT",
-        "userAvatar": "https://i.ibb.co/fphXw82/avatar-xuan-lan.jpg",
+        "userAvatar": "https://i.ibb.co/frD0Thn/avatar-kienht.jpg",
         "time": "Yesterday at 18:18",
         "content": "Gapo Dashboard Demo Video.2",
         "video": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
@@ -286,14 +286,17 @@
       "type": "POST",
       "post": {
         "id": 8,
-        "type": "TEXT",
+        "type": "IMAGE",
         "username": "Tuan Hung Nguyen",
         "userAvatar": "https://i.ibb.co/J7yWSPP/avatar-tuan-hung.jpg",
         "time": "3 hr",
         "content": "Cái kết của: Ở nhà lâu ngày không ra đường dễ dẫn đến tư tưởng thèm đủ mọi thứ. Gặp nhau giữa núi rừng Tây Nguyên chuyện gì xảy ra thì đã xảy ra rồi.",
-        "likeCount": "1.8K",
-        "commentCount": "696",
-        "shareCount": "123"
+        "images": [
+          "https://i.ibb.co/PDfVbFJ/content-post-8.jpg"
+        ],
+        "likeCount": "110K",
+        "commentCount": "1696",
+        "shareCount": "523"
       }
     },
     {
@@ -317,7 +320,7 @@
       "type": "POST",
       "post": {
         "id": 10,
-        "type": "TEXT",
+        "type": "IMAGE",
         "username": "Tuyet Loan Nguyen",
         "userAvatar": "https://i.ibb.co/DtPkMNN/avatar-tuyet-loan-nguyen.jpg",
         "time": "1 hr",
@@ -343,9 +346,9 @@
         "images": [
           "https://i.ibb.co/jyMKY8V/content-post-11.jpg"
         ],
-        "likeCount": "1.8K",
-        "commentCount": "696",
-        "shareCount": "123"
+        "likeCount": "6.2K",
+        "commentCount": "996",
+        "shareCount": "239"
       }
     },
     {
@@ -361,8 +364,8 @@
         "images": [
           "https://i.ibb.co/8PHw6YP/content-post-12.jpg"
         ],
-        "likeCount": "11.8K",
-        "commentCount": "996",
+        "likeCount": "11.2K",
+        "commentCount": "956",
         "shareCount": "823"
       }
     },
@@ -371,7 +374,7 @@
       "type": "POST",
       "post": {
         "id": 13,
-        "type": "TEXT",
+        "type": "IMAGE",
         "username": "Nguyễn Mỹ Hạnh",
         "userAvatar": "https://i.ibb.co/9gfbzJb/avatar-nguyen-my-hanh.jpg",
         "time": "15 giờ",
@@ -394,7 +397,7 @@
         "userAvatar": "https://i.ibb.co/DkWZ4Rc/avatar-beat-vn.png",
         "time": "2 tháng 5 lúc 15:20",
         "content": "HÀNG LOẠT SINH VIÊN BỊ MẤT ĐỒ CÓ GIÁ TRỊ SAU KHI KTX ĐHQG TPHCM TRỞ THÀNH KHU CÁCH LY TẬP TRUNG. Trong 2 tuần vừa qua, các bạn sinh viên ở kí túc xá khu A và khu B đã trở lại kí túc xá sau kỳ nghỉ tết lịch sử. Đây cũng là hai khu được UBND TPHCM trưng dụng làm khu cách ly tập trung trong diễn biến của dịch Covid-19. Trước đó BQL kí túc xá đã thông báo rất gấp rút cho sinh viên và huy động sinh viên KHÔNG QUAY LẠI KTX LẤY ĐỒ đồng thời ra rất nhiều văn bản cam kết cũng như thư ngỏ sẽ đảm bảo đồ dùng cá nhân cho sinh viên. Có những bạn vì không kịp lên lấy mà đành để lại những vật dụng có giá trị như laptop, đồng hồ, giày, thiết bị điện tử,.. Tuy nhiên, sau khi trở lại kí túc xá, đồ đạc của sinh viên đều không cánh mà bay. Ngoài những đồ đạc giá trị, đa số các nhu yếu phẩm hằng ngày cũng biến mất. Các tủ bị cạy, bẻ khoá nhằm lấy đồ bên trong và để lại hộp/vỏ :)))) Hiện nay các bạn sinh viên ở ktx khu A và khu B đều đang rất bức xúc, hằng ngày đều có cập nhật tình trạng mất đồ trong group ktx. Đến nay, đã qua 2 tuần sau tình trạng mất đồ nhưng BQL KTX vẫn chưa đưa ra được phương án giải quyết.",
-        "likeCount": "6.8K",
+        "likeCount": "3.5K",
         "commentCount": "1996",
         "shareCount": "423"
       }
