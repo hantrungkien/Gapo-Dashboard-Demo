@@ -1,6 +1,6 @@
 package com.kienht.gapo.dashboard.data.repository.source.remote.model
 
-import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeed
+import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeeds
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -19,9 +19,9 @@ data class NewsFeedDTOModel(
 )
 
 internal fun NewsFeedDTOModel.mapToDomain() =
-    NewsFeed(
+    NewsFeeds(
         id,
-        NewsFeed.Type.get(type),
+        NewsFeeds.Type.get(type),
         stories.mapToDomain(),
         post.mapToDomain(),
         friendRequests.mapToDomain()

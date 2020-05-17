@@ -1,6 +1,6 @@
 package com.kienht.gapo.dashboard.data.repository.source.cache.model
 
-import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeed
+import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeeds
 
 /**
  * @author kienht
@@ -16,15 +16,15 @@ data class NewsFeedDAOModel(
 )
 
 internal fun NewsFeedDAOModel.mapToDomain() =
-    NewsFeed(
+    NewsFeeds(
         id,
-        NewsFeed.Type.get(type),
+        NewsFeeds.Type.get(type),
         stories.mapToDomain(),
         post.mapToDomain(),
         friendRequests.mapToDomain()
     )
 
-internal fun NewsFeed.mapToCached() =
+internal fun NewsFeeds.mapToCached() =
     NewsFeedDAOModel(
         id,
         type.value(),
@@ -34,4 +34,4 @@ internal fun NewsFeed.mapToCached() =
     )
 
 internal fun List<NewsFeedDAOModel>.mapToDomain() = this.map { it.mapToDomain() }
-internal fun List<NewsFeed>.mapToCached() = this.map { it.mapToCached() }
+internal fun List<NewsFeeds>.mapToCached() = this.map { it.mapToCached() }

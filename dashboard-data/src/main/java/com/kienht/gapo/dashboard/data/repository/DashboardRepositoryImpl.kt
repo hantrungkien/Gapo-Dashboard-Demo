@@ -6,7 +6,7 @@ import com.kienht.gapo.dashboard.data.repository.source.cache.model.mapToCached
 import com.kienht.gapo.dashboard.data.repository.source.cache.model.mapToDomain
 import com.kienht.gapo.dashboard.data.repository.source.remote.DashboardRemote
 import com.kienht.gapo.dashboard.data.repository.source.remote.model.mapToDomain
-import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeed
+import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeeds
 import com.kienht.gapo.dashboard.domain.usecase.news.repository.DashboardRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
@@ -43,14 +43,14 @@ internal class DashboardRepositoryImpl(
     }
 
     @ExperimentalCoroutinesApi
-    override fun newsFeedsFlow(): Flow<List<NewsFeed>> {
-        val cacheFlow = flow<List<NewsFeed>> {
+    override fun newsFeedsFlow(): Flow<List<NewsFeeds>> {
+        val cacheFlow = flow<List<NewsFeeds>> {
             val list = dashboardCache.fetchNewsFeeds().mapToDomain()
             emit(list)
         }.catch {
             Log.e("DashboardRepository", "newsFeedsFlow: cacheFlow => error")
         }
-        val remoteFlow = flow<List<NewsFeed>> {
+        val remoteFlow = flow<List<NewsFeeds>> {
             val data = dashboardRemote.fetchNewsFeeds().mapToDomain()
             dashboardCache.saveNewsFeeds(data.mapToCached())
             val list = dashboardCache.fetchNewsFeeds().mapToDomain()

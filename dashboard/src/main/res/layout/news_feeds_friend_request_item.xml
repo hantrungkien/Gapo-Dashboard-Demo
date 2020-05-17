@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.widget.ImageView.ScaleType" />
+
+        <variable
+            name="item"
+            type="com.kienht.gapo.dashboard.news_feeds.model.FriendRequestViewData" />
+
+        <variable
+            name="adapterPosition"
+            type="Integer" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_5dp"
+        app:strokeColor="@android:color/darker_gray"
+        app:strokeWidth="0.5dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_friend_avatar"
+                android:layout_width="@dimen/_240dp"
+                android:layout_height="@dimen/_240dp"
+                app:scaleType="@{ScaleType.CENTER_CROP}"
+                app:url="@{item.friendAvatar}"
+                tools:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/text_friend_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_friend_avatar"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@{item.friendName}"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="bold"
+                tools:text="KienHT" />
+
+            <TextView
+                android:id="@+id/text_mutual_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_friend_name"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@{item.mutualFriendsCount + ` mutual friends`}"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_12sp"
+                tools:text="KienHT" />
+
+            <LinearLayout
+                android:id="@+id/layout_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_mutual_friend"
+                android:layout_alignStart="@+id/image_friend_avatar"
+                android:layout_alignEnd="@+id/image_friend_avatar"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_5dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_5dp"
+                    android:layout_weight="0.6"
+                    android:backgroundTint="#FF5FAB17"
+                    android:singleLine="true"
+                    android:text="Confirm"
+                    android:textAllCaps="false"
+                    app:cornerRadius="@dimen/_5dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_delete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5dp"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:layout_weight="0.4"
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:singleLine="true"
+                    android:text="Delete"
+                    android:textAllCaps="false"
+                    app:cornerRadius="@dimen/_5dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

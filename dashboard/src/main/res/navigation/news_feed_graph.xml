@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/news_feed"
-        android:name="com.kienht.gapo.dashboard.news_feed.NewsFeedFragment"
+        android:name="com.kienht.gapo.dashboard.news_feeds.NewsFeedsFragment"
         android:label="news_feed_fragment"
-        tools:layout="@layout/news_feed_fragment">
+        tools:layout="@layout/news_feeds_fragment">
 
     </fragment>
 

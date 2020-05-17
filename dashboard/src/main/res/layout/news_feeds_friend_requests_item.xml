@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="java.util.List&lt;com.kienht.gapo.dashboard.news_feeds.model.FriendRequestViewData>" />
+
+        <variable
+            name="adapterPosition"
+            type="Integer" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_10dp"
+            android:paddingTop="@dimen/_10dp"
+            android:paddingEnd="@dimen/_10dp">
+
+            <TextView
+                android:id="@+id/text_friend_requests"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Friend Request"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/button_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_more_horiz_black_24dp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_friend_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_top"
+            android:clipToPadding="false"
+            app:submitList="@{item}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_friend_request"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="See All"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</layout>

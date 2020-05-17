@@ -1,12 +1,12 @@
-package com.kienht.gapo.dashboard.videos.di
+package com.kienht.gapo.dashboard.news_feeds.di
 
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.kienht.gapo.core.common.ViewModelFactory
 import com.kienht.gapo.core.di.common.ViewModelKey
-import com.kienht.gapo.dashboard.videos.VideosFragment
-import com.kienht.gapo.dashboard.videos.viewmodel.VideosViewModel
+import com.kienht.gapo.dashboard.news_feeds.NewsFeedsFragment
+import com.kienht.gapo.dashboard.news_feeds.viewmodel.NewsFeedsViewModel
 import com.kienht.gapo.shared.FeatureScope
 import dagger.Binds
 import dagger.Module
@@ -18,11 +18,11 @@ import dagger.multibindings.IntoMap
  * @since 15/05/2020
  */
 @Module
-abstract class VideosModule {
+abstract class NewsFeedsModule {
 
     @Binds
     @FeatureScope
-    abstract fun bindVideosFragment(videosFragment: VideosFragment): Fragment
+    abstract fun bindNewsFeedsFragment(newsFeedsFragment: NewsFeedsFragment): Fragment
 
     @Binds
     @FeatureScope
@@ -30,6 +30,6 @@ abstract class VideosModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(VideosViewModel::class)
-    abstract fun bindVideosViewModel(videosViewModel: VideosViewModel): ViewModel
+    @ViewModelKey(NewsFeedsViewModel::class)
+    abstract fun bindNewsFeedsViewModel(newsFeedsViewModel: NewsFeedsViewModel): ViewModel
 }
