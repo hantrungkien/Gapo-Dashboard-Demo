@@ -33,7 +33,7 @@ An app which attempts to use the latest cutting edge libraries and tools.
 
 * Login session will be cached [one week](https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/auth-data/src/main/java/com/kienht/gapo/auth/data/source/cache/AuthCacheImpl.kt). Exceeding this time is considered stale.
 
-* News feeds with multiple types (Stories & Friend Requests & Posts with only text, text + one image, text + one video) is smooth scroll.
+* [News feeds](https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/dashboard/src/main/java/com/kienht/gapo/dashboard/news_feeds/NewsFeedsFragment.kt) with [multiple types](https://github.com/hantrungkien/Gapo-Dashboard-Demo/tree/master/dashboard/src/main/java/com/kienht/gapo/dashboard/news_feeds/adapter/viewholder) (Stories & Friend Requests & Posts with only text, text + one image, text + one video) is smooth scroll.
 
 * [Posts Details](https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/post_details/src/main/java/com/kienht/gapo/post_details/PostDetailsActivity.kt) with comment and comment reply.
 
