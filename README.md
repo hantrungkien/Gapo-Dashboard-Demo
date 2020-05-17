@@ -31,9 +31,11 @@ An app which attempts to use the latest cutting edge libraries and tools.
 
 * Instagram/Youtube style navigation using Navigation Component to create [multiple fragment stacks](https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/dashboard/src/main/java/com/kienht/gapo/dashboard/DashboardActivity.kt).
 
-* Login session will be cached [one week](https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/auth-data/src/main/java/com/kienht/gapo/auth/data/source/cache/AuthCacheImpl.kt). Exceeding this time is considered stale.]
+* Login session will be cached [one week](https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/auth-data/src/main/java/com/kienht/gapo/auth/data/source/cache/AuthCacheImpl.kt). Exceeding this time is considered stale.
 
 * News feeds with multiple types (Stories & Friend Requests & Posts with only text, text + one image, text + one video) is smooth scroll.
+
+* [Posts Details](https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/post_details/src/main/java/com/kienht/gapo/post_details/PostDetailsActivity.kt) with comment and comment reply.
 
 * Using [Flow](https://kotlinlang.org/docs/reference/coroutines/flow.html) to [load News Feeds](https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/dashboard-data/src/main/java/com/kienht/gapo/dashboard/data/repository/DashboardRepositoryImpl.kt). Each time data is successfully loaded from the remote then it will be saved in [local cache](https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/dashboard-data/src/main/java/com/kienht/gapo/dashboard/data/repository/source/cache/DashboardCacheImpl.kt). It is limited to 1 hour.
 
