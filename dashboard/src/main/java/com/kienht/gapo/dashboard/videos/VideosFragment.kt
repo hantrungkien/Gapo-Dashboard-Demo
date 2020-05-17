@@ -1,6 +1,8 @@
 package com.kienht.gapo.dashboard.videos
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -39,6 +41,11 @@ class VideosFragment : BaseFragment<VideosFragmentBinding>() {
 
         with(binding) {
             viewModel = videosViewModel
+
+            buttonPostDetails.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("kienht://postdetails/69"))
+                startActivity(intent)
+            }
         }
 
         Log.e(TAG, "onViewCreated")

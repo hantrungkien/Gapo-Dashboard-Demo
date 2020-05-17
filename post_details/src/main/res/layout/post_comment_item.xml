@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="androidx.core.content.ContextCompat" />
+
+        <variable
+            name="item"
+            type="com.kienht.gapo.post_details.model.CommentViewData" />
+
+        <variable
+            name="adapterPosition"
+            type="Integer" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_avatar"
+            android:layout_width="@dimen/_40dp"
+            android:layout_height="@dimen/_40dp"
+            app:isCircle="@{true}"
+            app:placeHolder="@{ContextCompat.getDrawable(context,com.kienht.gapo.core.R.drawable.ic_account_circle_gray_chateau_100dp)}"
+            app:url="@{item.avatar}"
+            tools:src="@drawable/ic_account_circle_gray_chateau_100dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5dp"
+            android:layout_toEndOf="@+id/image_avatar"
+            android:background="@drawable/rounded_comment"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/_15dp"
+            android:paddingTop="@dimen/_10dp"
+            android:paddingEnd="@dimen/_15dp"
+            android:paddingBottom="@dimen/_10dp">
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.username}"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="bold"
+                tools:text="Ngọc Trinh" />
+
+            <TextView
+                android:id="@+id/text_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.content}"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14sp"
+                tools:text="Trông được đó!" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_content"
+            android:layout_alignStart="@+id/layout_content"
+            android:layout_marginStart="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_3dp"
+            android:singleLine="true"
+            android:text="@{item.time}"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sp"
+            tools:text="39m" />
+
+        <TextView
+            android:id="@+id/text_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_content"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_3dp"
+            android:layout_toEndOf="@+id/text_time"
+            android:singleLine="true"
+            android:text="Like"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sp" />
+
+        <TextView
+            android:id="@+id/text_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_content"
+            android:layout_marginStart="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_3dp"
+            android:layout_toEndOf="@+id/text_like"
+            android:singleLine="true"
+            android:text="Reply"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sp" />
+
+    </RelativeLayout>
+</layout>

@@ -26,7 +26,7 @@ class FriendRequestViewHolder(
             val context = binding.root.context
             binding.listFriendRequest.apply {
                 itemAnimator = null
-                setHasFixedSize(true)//only for demo
+                isNestedScrollingEnabled = false
                 setRecycledViewPool(pool)
                 addItemDecoration(FriendRequestDecoration(context))
                 layoutManager =

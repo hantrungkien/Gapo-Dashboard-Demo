@@ -2,8 +2,12 @@
 
 package com.kienht.gapo.core.utils
 
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 import com.kienht.gapo.core.base.GlideApp
 import kotlin.collections.ArrayList
 
@@ -28,3 +32,11 @@ fun ImageView.glideClear() {
     GlideApp.with(this).clear(this)
     setImageDrawable(null)
 }
+
+fun ViewGroup.inflateViewDataBinding(layout: Int): ViewDataBinding =
+    DataBindingUtil.inflate<ViewDataBinding>(
+        LayoutInflater.from(context),
+        layout,
+        this,
+        false
+    )

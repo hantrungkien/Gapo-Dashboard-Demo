@@ -5,6 +5,8 @@
 
     <data>
 
+        <import type="androidx.core.content.ContextCompat" />
+
         <import type="android.widget.ImageView.ScaleType" />
 
         <variable
@@ -49,7 +51,7 @@
                     android:layout_height="@dimen/_30dp"
                     android:layout_gravity="center"
                     app:isCircle="@{true}"
-                    app:placeHolder="@{@drawable/ic_account_circle_gray_chateau_100dp}"
+                    app:placeHolder="@{ContextCompat.getDrawable(context,com.kienht.gapo.core.R.drawable.ic_account_circle_gray_chateau_100dp)}"
                     app:url="@{item.userAvatar}"
                     tools:src="@drawable/ic_account_circle_gray_chateau_100dp" />
 

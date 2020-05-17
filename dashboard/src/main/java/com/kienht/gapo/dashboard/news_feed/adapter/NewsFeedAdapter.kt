@@ -1,13 +1,11 @@
 package com.kienht.gapo.dashboard.news_feed.adapter
 
-import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.kienht.gapo.core.utils.inflateViewDataBinding
 import com.kienht.gapo.dashboard.R
 import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeed
 import com.kienht.gapo.dashboard.domain.usecase.news.model.Post
@@ -18,7 +16,6 @@ import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.post_video.PostVid
 import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.story.StoriesViewHolder
 import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.friend_request.FriendRequestViewHolder
 import com.kienht.gapo.dashboard.news_feed.model.NewsFeedViewData
-import com.kienht.gapo.dashboard.news_feed.model.PostViewData
 
 /**
  * @author kienht
@@ -51,7 +48,7 @@ class NewsFeedAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val binding = getViewDataBinding(parent, viewType)
+        val binding = parent.inflateViewDataBinding(viewType)
         return when (viewType) {
             R.layout.news_feed_stories_item -> {
                 StoriesViewHolder(
@@ -131,7 +128,7 @@ class NewsFeedAdapter(
     }
 
     override fun getItemId(position: Int): Long {
-        return currentList[position].id
+        return getItem(position).id
     }
 
     override fun onDetachedFromRecyclerView(recyclerView: RecyclerView) {
@@ -161,12 +158,4 @@ class NewsFeedAdapter(
         super.onViewRecycled(holder)
         (holder as? NewsFeedBaseViewHolder<*>)?.onViewRecycled()
     }
-
-    private fun getViewDataBinding(parent: ViewGroup, layout: Int): ViewDataBinding =
-        DataBindingUtil.inflate<ViewDataBinding>(
-            LayoutInflater.from(parent.context),
-            layout,
-            parent,
-            false
-        )
 }

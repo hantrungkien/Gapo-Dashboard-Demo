@@ -25,9 +25,9 @@ class StoriesViewHolder(
             val context = binding.root.context
             binding.listStories.apply {
                 itemAnimator = null
-                setHasFixedSize(true)//only for demo
                 setRecycledViewPool(pool)
                 addItemDecoration(StoriesDecoration(context))
+                isNestedScrollingEnabled = false
                 layoutManager =
                     LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
                 adapter = StoryAdapter(lifecycleOwner)

@@ -2,7 +2,6 @@ package com.kienht.gapo.dashboard.news_feed.adapter.viewholder.post_image
 
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.LifecycleOwner
-import com.kienht.gapo.core.base.GlideApp
 import com.kienht.gapo.core.utils.glideClear
 import com.kienht.gapo.dashboard.databinding.NewsFeedPostImageItemBinding
 import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.NewsFeedBaseViewHolder

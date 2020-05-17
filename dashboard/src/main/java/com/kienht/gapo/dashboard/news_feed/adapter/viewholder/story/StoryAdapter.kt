@@ -1,12 +1,11 @@
 package com.kienht.gapo.dashboard.news_feed.adapter.viewholder.story
 
-import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.ListAdapter
 import com.kienht.gapo.core.utils.glideClear
+import com.kienht.gapo.core.utils.inflateViewDataBinding
 import com.kienht.gapo.dashboard.R
 import com.kienht.gapo.dashboard.databinding.NewsFeedStoryItemBinding
 import com.kienht.gapo.dashboard.news_feed.adapter.viewholder.NewsFeedBaseViewHolder
@@ -31,7 +30,7 @@ class StoryAdapter(private val viewLifecycleOwner: LifecycleOwner) :
         parent: ViewGroup,
         viewType: Int
     ): StoryViewHolder {
-        val binding = getViewDataBinding(parent, viewType)
+        val binding = parent.inflateViewDataBinding(viewType)
         return StoryViewHolder(binding, viewLifecycleOwner)
     }
 
@@ -67,12 +66,4 @@ class StoryAdapter(private val viewLifecycleOwner: LifecycleOwner) :
             }
         }
     }
-
-    private fun getViewDataBinding(parent: ViewGroup, layout: Int): ViewDataBinding =
-        DataBindingUtil.inflate<ViewDataBinding>(
-            LayoutInflater.from(parent.context),
-            layout,
-            parent,
-            false
-        )
 }
