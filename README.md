@@ -39,6 +39,15 @@ An app which attempts to use the latest cutting edge libraries and tools.
 
 * Using [Flow](https://kotlinlang.org/docs/reference/coroutines/flow.html) to [load News Feeds](https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/dashboard-data/src/main/java/com/kienht/gapo/dashboard/data/repository/DashboardRepositoryImpl.kt). Each time data is successfully loaded from the remote then it will be saved in [local cache](https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/dashboard-data/src/main/java/com/kienht/gapo/dashboard/data/repository/source/cache/DashboardCacheImpl.kt). It is limited to 1 hour.
 
+## NOT IMPLEMENTED YET
+
+* Detailed implementations in the DiffUtil.Callback classes.
+* Deep dive into ExoPlayer in RecyclerView.
+* Deep dive into Glide optimization.
+* Dealing click on news feeds items.
+* Caching by SQL or NoSQL. Currently using SharedPref.
+* Organize color code and string resource.
+
 ### LICENCE
 
     Copyright 2020 Kien Han Trung
