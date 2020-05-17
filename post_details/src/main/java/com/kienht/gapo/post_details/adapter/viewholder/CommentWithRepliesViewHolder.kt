@@ -1,6 +1,5 @@
 package com.kienht.gapo.post_details.adapter.viewholder
 
-import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kienht.gapo.core.utils.glideClear
@@ -15,26 +14,22 @@ import com.kienht.gapo.post_details.model.CommentViewData
  * @since 17/05/2020
  */
 class CommentWithRepliesViewHolder(
-    private val binding: ViewDataBinding,
+    private val binding: PostCommentWithRepliesItemBinding,
     private val lifecycleOwner: LifecycleOwner
 ) : CommentBaseViewHolder<CommentViewData>(binding, lifecycleOwner) {
 
     init {
-        if (binding is PostCommentWithRepliesItemBinding) {
-            binding.listReplies.apply {
-                itemAnimator = null
-                layoutManager = LinearLayoutManager(this.context)
-                addItemDecoration(CommentDecoration(this.context))
-                isNestedScrollingEnabled = false
-                adapter = CommentAdapter(lifecycleOwner)
-            }
+        binding.listReplies.apply {
+            itemAnimator = null
+            layoutManager = LinearLayoutManager(this.context)
+            addItemDecoration(CommentDecoration(this.context))
+            isNestedScrollingEnabled = false
+            adapter = CommentAdapter(lifecycleOwner)
         }
     }
 
     override fun onViewRecycled() {
         super.onViewRecycled()
-        if (binding is PostCommentWithRepliesItemBinding) {
-            binding.layoutContent.imageAvatar.glideClear()
-        }
+        binding.layoutContent.imageAvatar.glideClear()
     }
 }

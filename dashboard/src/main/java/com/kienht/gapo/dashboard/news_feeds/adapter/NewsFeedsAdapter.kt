@@ -48,36 +48,35 @@ class NewsFeedAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val binding = parent.inflateViewDataBinding(viewType)
         return when (viewType) {
             R.layout.news_feeds_stories_item -> {
                 StoriesViewHolder(
-                    binding,
+                    parent.inflateViewDataBinding(viewType),
                     pool,
                     lifecycleOwner
                 )
             }
             R.layout.news_feeds_post_text_item -> {
                 PostTextViewHolder(
-                    binding,
+                    parent.inflateViewDataBinding(viewType),
                     lifecycleOwner
                 )
             }
             R.layout.news_feeds_post_image_item -> {
                 PostImageViewHolder(
-                    binding,
+                    parent.inflateViewDataBinding(viewType),
                     lifecycleOwner
                 )
             }
             R.layout.news_feeds_post_video_item -> {
                 PostVideoViewHolder(
-                    binding,
+                    parent.inflateViewDataBinding(viewType),
                     lifecycleOwner
                 )
             }
             R.layout.news_feeds_friend_requests_item -> {
                 FriendRequestViewHolder(
-                    binding,
+                    parent.inflateViewDataBinding(viewType),
                     pool,
                     lifecycleOwner
                 )

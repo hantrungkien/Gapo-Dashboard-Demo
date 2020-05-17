@@ -1,7 +1,6 @@
 package com.kienht.gapo.dashboard.news_feeds.adapter.viewholder.friend_request
 
 import android.view.ViewGroup
-import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.ListAdapter
 import com.kienht.gapo.core.utils.glideClear
@@ -30,8 +29,7 @@ class FriendRequestAdapter(private val viewLifecycleOwner: LifecycleOwner) :
         parent: ViewGroup,
         viewType: Int
     ): FriendRequestViewHolder {
-        val binding = parent.inflateViewDataBinding(viewType)
-        return FriendRequestViewHolder(binding, viewLifecycleOwner)
+        return FriendRequestViewHolder(parent.inflateViewDataBinding(viewType), viewLifecycleOwner)
     }
 
     override fun onBindViewHolder(
@@ -53,16 +51,14 @@ class FriendRequestAdapter(private val viewLifecycleOwner: LifecycleOwner) :
     }
 
     inner class FriendRequestViewHolder(
-        private val binding: ViewDataBinding,
+        private val binding: NewsFeedsFriendRequestItemBinding,
         viewLifecycleOwner: LifecycleOwner
     ) :
         NewsFeedBaseViewHolder<FriendRequestViewData>(binding, viewLifecycleOwner) {
 
         override fun onViewRecycled() {
             super.onViewRecycled()
-            if (binding is NewsFeedsFriendRequestItemBinding) {
-                binding.imageFriendAvatar.glideClear()
-            }
+            binding.imageFriendAvatar.glideClear()
         }
     }
 }

@@ -1,7 +1,6 @@
 package com.kienht.gapo.dashboard.news_feeds.adapter.viewholder.story
 
 import android.view.ViewGroup
-import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.ListAdapter
 import com.kienht.gapo.core.utils.glideClear
@@ -30,8 +29,7 @@ class StoryAdapter(private val viewLifecycleOwner: LifecycleOwner) :
         parent: ViewGroup,
         viewType: Int
     ): StoryViewHolder {
-        val binding = parent.inflateViewDataBinding(viewType)
-        return StoryViewHolder(binding, viewLifecycleOwner)
+        return StoryViewHolder(parent.inflateViewDataBinding(viewType), viewLifecycleOwner)
     }
 
     override fun onBindViewHolder(
@@ -53,17 +51,14 @@ class StoryAdapter(private val viewLifecycleOwner: LifecycleOwner) :
     }
 
     inner class StoryViewHolder(
-        private val binding: ViewDataBinding,
+        private val binding: NewsFeedsStoryItemBinding,
         viewLifecycleOwner: LifecycleOwner
-    ) :
-        NewsFeedBaseViewHolder<StoryViewData>(binding, viewLifecycleOwner) {
+    ) : NewsFeedBaseViewHolder<StoryViewData>(binding, viewLifecycleOwner) {
 
         override fun onViewRecycled() {
             super.onViewRecycled()
-            if (binding is NewsFeedsStoryItemBinding) {
-                binding.imageAvatar.glideClear()
-                binding.imageContent.glideClear()
-            }
+            binding.imageAvatar.glideClear()
+            binding.imageContent.glideClear()
         }
     }
 }

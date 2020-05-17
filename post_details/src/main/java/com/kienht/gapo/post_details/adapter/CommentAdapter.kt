@@ -28,11 +28,17 @@ class CommentAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val binding = parent.inflateViewDataBinding(viewType)
         return when (viewType) {
-            R.layout.post_comment_item -> CommentViewHolder(binding, lifecycleOwner)
+            R.layout.post_comment_item ->
+                CommentViewHolder(
+                    parent.inflateViewDataBinding(viewType),
+                    lifecycleOwner
+                )
             R.layout.post_comment_with_replies_item ->
-                CommentWithRepliesViewHolder(binding, lifecycleOwner)
+                CommentWithRepliesViewHolder(
+                    parent.inflateViewDataBinding(viewType),
+                    lifecycleOwner
+                )
             else -> throw IllegalArgumentException()
         }
     }

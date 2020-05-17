@@ -3,7 +3,6 @@ package com.kienht.gapo.dashboard.news_feeds.adapter.viewholder.post_video
 import android.graphics.Point
 import android.graphics.Rect
 import android.view.ViewParent
-import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.LifecycleOwner
 import com.brightcove.player.event.EventType
 import com.brightcove.player.model.DeliveryType
@@ -22,14 +21,14 @@ import com.kienht.gapo.dashboard.news_feeds.model.PostViewData
  * @since 16/05/2020
  */
 class PostVideoViewHolder(
-    private val binding: ViewDataBinding,
+    private val binding: NewsFeedsPostVideoItemBinding,
     lifecycleOwner: LifecycleOwner
 ) : NewsFeedBaseViewHolder<PostViewData>(binding, lifecycleOwner) {
 
     private var exoPlayer: BrightcoveExoPlayerTextureVideoView? = null
 
     init {
-        if (binding is NewsFeedsPostVideoItemBinding && exoPlayer == null) {
+        if (exoPlayer == null) {
             val context = binding.root.context
             exoPlayer = BrightcoveExoPlayerTextureVideoView(context)
             binding.layoutVideo.addView(exoPlayer)
@@ -72,9 +71,7 @@ class PostVideoViewHolder(
     override fun onViewRecycled() {
         super.onViewRecycled()
         exoPlayer?.stopPlayback()
-        if (binding is NewsFeedsPostVideoItemBinding) {
-            binding.imageAvatar.glideClear()
-        }
+        binding.imageAvatar.glideClear()
     }
 
     private fun BaseVideoView.shouldPause(parent: ViewParent?): Boolean =
