@@ -39,8 +39,8 @@ abstract class CoreModule {
         @Provides
         internal fun provideLoggingInterceptor(
             @DebugModeQualifier isDebug: Boolean
-        ): HttpLoggingInterceptor =
-            HttpLoggingInterceptor().apply {
+        ): HttpLoggingInterceptor = HttpLoggingInterceptor()
+                .apply {
                 level = if (isDebug) {
                     HttpLoggingInterceptor.Level.BODY
                 } else {

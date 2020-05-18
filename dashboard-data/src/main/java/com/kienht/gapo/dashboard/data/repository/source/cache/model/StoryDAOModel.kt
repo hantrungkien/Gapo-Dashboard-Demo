@@ -5,7 +5,7 @@ import com.kienht.gapo.dashboard.domain.usecase.news.model.Story
 /**
  * @author kienht
  */
-class StoryDAOModel(
+data class StoryDAOModel(
     val id: Long,
     val username: String,
     val userAvatar: String,

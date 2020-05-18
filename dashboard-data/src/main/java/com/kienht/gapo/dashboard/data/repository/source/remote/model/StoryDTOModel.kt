@@ -8,7 +8,7 @@ import com.squareup.moshi.JsonClass
  * @author kienht
  */
 @JsonClass(generateAdapter = true)
-class StoryDTOModel(
+data class StoryDTOModel(
     @Json(name = "id") val id: Long,
     @Json(name = "username") val username: String,
     @Json(name = "userAvatar") val userAvatar: String,

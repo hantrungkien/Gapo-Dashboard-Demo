@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.annotation.Keep
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.kienht.gapo.core.base.BaseBindingActivity
@@ -20,6 +21,7 @@ import javax.inject.Inject
  * 1. Demo cấu hình Dagger cho cả 2 kiểu module Android Lib và Dynamic Feature.
  * 2. Module Lib hữu dụng trong trường hợp phải sử dụng [flavor]Implementation trong gradle nếu app có nhiều [flavors].
  */
+@Keep
 class SplashActivity : BaseBindingActivity<SplashActivityBinding>() {
 
     @Inject

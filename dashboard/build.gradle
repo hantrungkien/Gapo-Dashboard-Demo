@@ -46,6 +46,13 @@ android {
         features = ["parcelize"]
     }
 
+    buildTypes {
+        release {
+            debuggable debuggable_release
+            proguardFiles 'proguard-rules-dynamic-features.pro'
+        }
+    }
+
 }
 
 kapt {
