@@ -18,8 +18,6 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 14/05/2020
  */
 @Module
 abstract class DashboardDataModule {

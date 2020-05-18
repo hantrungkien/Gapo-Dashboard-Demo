@@ -8,8 +8,6 @@ import htkien.autodimens.R.dimen as autoDimens
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 16/10/2019
  */
 class NewsFeedsDecoration(context: Context) : RecyclerView.ItemDecoration() {
 

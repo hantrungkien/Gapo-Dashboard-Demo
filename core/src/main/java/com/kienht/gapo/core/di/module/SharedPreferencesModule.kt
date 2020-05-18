@@ -8,8 +8,6 @@ import dagger.Provides
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 15/05/2020
  */
 @Module
 open class SharedPreferencesModule(val context: Context, val name: String) {

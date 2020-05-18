@@ -7,8 +7,6 @@ import javax.inject.Provider
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 13/12/2018
  */
 class ViewModelFactory @Inject constructor(
     private val creators: @JvmSuppressWildcards Map<Class<out ViewModel>, Provider<ViewModel>>

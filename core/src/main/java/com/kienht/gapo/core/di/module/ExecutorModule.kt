@@ -12,8 +12,6 @@ import javax.inject.Singleton
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 25/09/2019
  */
 @Module
 class ExecutorModule {

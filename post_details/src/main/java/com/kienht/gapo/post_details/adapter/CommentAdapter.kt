@@ -2,6 +2,7 @@ package com.kienht.gapo.post_details.adapter
 
 import android.view.ViewGroup
 import androidx.lifecycle.LifecycleOwner
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.kienht.gapo.core.utils.inflateViewDataBinding
@@ -13,8 +14,6 @@ import com.kienht.gapo.post_details.model.CommentViewData
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 17/05/2020
  */
 class CommentAdapter(
     private val lifecycleOwner: LifecycleOwner
@@ -25,6 +24,12 @@ class CommentAdapter(
     init {
         setHasStableIds(true)
         stateRestorationPolicy = StateRestorationPolicy.PREVENT_WHEN_EMPTY
+    }
+
+    override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
+        super.onAttachedToRecyclerView(recyclerView)
+        val layoutManager = recyclerView.layoutManager
+        (layoutManager as? LinearLayoutManager)?.recycleChildrenOnDetach = true
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

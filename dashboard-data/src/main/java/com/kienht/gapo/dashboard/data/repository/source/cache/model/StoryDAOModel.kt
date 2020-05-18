@@ -4,8 +4,6 @@ import com.kienht.gapo.dashboard.domain.usecase.news.model.Story
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 16/05/2020
  */
 class StoryDAOModel(
     val id: Long,

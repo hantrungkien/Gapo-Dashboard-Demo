@@ -16,8 +16,6 @@ import kotlinx.coroutines.flow.merge
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 14/05/2020
  */
 internal class DashboardRepositoryImpl(
     private val dashboardCache: DashboardCache,
@@ -42,6 +40,11 @@ internal class DashboardRepositoryImpl(
         }
     }
 
+    /**
+     * Sử dụng flow để merge các DataSources
+     * Request data song song từ các DataSources
+     * Nếu nhận được dữ liệu từ Remote sẽ lưu xuống Cache trước khi emit.
+     */
     @ExperimentalCoroutinesApi
     override fun newsFeedsFlow(): Flow<List<NewsFeeds>> {
         val cacheFlow = flow<List<NewsFeeds>> {

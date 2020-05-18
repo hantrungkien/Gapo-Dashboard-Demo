@@ -7,7 +7,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.kienht.gapo.core.base.BaseFragment
+import com.kienht.gapo.core.base.BaseBindingFragment
 import com.kienht.gapo.dashboard.R
 import com.kienht.gapo.dashboard.databinding.NewsFeedsFragmentBinding
 import com.kienht.gapo.dashboard.news_feeds.adapter.NewsFeedAdapter
@@ -20,16 +20,17 @@ import javax.inject.Inject
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 14/05/2020
  */
-class NewsFeedsFragment : BaseFragment<NewsFeedsFragmentBinding>(), OnClickPostItemListener {
+class NewsFeedsFragment : BaseBindingFragment<NewsFeedsFragmentBinding>(), OnClickPostItemListener {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
     private val newsFeedViewModel by viewModels<NewsFeedsViewModel> { viewModelFactory }
 
+    /**
+     * Sử dụng Pool riêng cho các Child RecyclerView nằm ngang.
+     */
     private val pool: RecyclerView.RecycledViewPool = RecyclerView.RecycledViewPool()
 
     override val layoutResource: Int

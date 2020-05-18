@@ -2,8 +2,6 @@ package com.kienht.gapo.core.common
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 13/12/2018
  */
 sealed class DataState<out R> {
     object LOADING : DataState<Nothing>()

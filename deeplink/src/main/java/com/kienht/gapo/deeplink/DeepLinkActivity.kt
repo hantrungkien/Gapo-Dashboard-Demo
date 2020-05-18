@@ -7,8 +7,6 @@ import com.airbnb.deeplinkdispatch.BaseRegistry
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 10/05/2020
  */
 
 private val deepLinkRegistryClassMap = mutableMapOf<String, Class<*>>()

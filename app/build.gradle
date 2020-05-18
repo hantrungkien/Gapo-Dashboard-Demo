@@ -49,15 +49,29 @@ android {
         features = ["parcelize"]
     }
 
+    signingConfigs {
+        debug {
+            storeFile file("src/key/Gapo-Demo.jks")
+            storePassword "123654"
+            keyAlias "GapoDemo"
+            keyPassword "123654"
+        }
+        release {
+            storeFile file("src/key/Gapo-Demo.jks")
+            storePassword "123654"
+            keyAlias "GapoDemo"
+            keyPassword "123654"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     dynamicFeatures = [":dashboard", ":login", ":post_details"]
-
-
 }
 
 kapt {

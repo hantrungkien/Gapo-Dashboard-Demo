@@ -19,8 +19,6 @@ import com.kienht.gapo.dashboard.news_feeds.model.NewsFeedViewData
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 16/05/2020
  */
 
 interface OnClickPostItemListener {

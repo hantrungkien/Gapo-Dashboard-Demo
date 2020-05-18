@@ -5,8 +5,6 @@ import retrofit2.http.GET
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 15/05/2020
  */
 internal interface DashboardApiService {
 

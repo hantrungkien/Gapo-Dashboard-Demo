@@ -7,8 +7,6 @@ import javax.inject.Inject
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 15/05/2020
  */
 internal class AuthRemoteImpl @Inject constructor(
     private val authApiService: AuthApiService,
@@ -26,6 +24,9 @@ internal class AuthRemoteImpl @Inject constructor(
             field = value
         }
 
+    /**
+     * Fake login from remote
+     */
     override suspend fun login(phone: String) {
         try {
             authApiService.login(phone)

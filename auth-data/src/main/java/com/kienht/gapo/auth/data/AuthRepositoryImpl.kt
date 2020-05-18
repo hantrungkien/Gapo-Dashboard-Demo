@@ -7,8 +7,6 @@ import javax.inject.Inject
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 15/05/2020
  */
 internal class AuthRepositoryImpl constructor(
     private val authCache: AuthCache,
@@ -33,6 +31,9 @@ internal class AuthRepositoryImpl constructor(
         }
     }
 
+    /**
+     * Kiểm tra xem đã login hay chưa?
+     */
     override val isLoggedIn: Boolean
         get() = authCache.isLoggedIn
             .also {
@@ -41,11 +42,17 @@ internal class AuthRepositoryImpl constructor(
                 }
             }
 
+    /**
+     * Sau khi login thành công sẽ lưu dữ liệu xuống cache.
+     */
     override suspend fun login(phone: String) {
         authRemote.login(phone)
         authCache.setLoggedInUser()
     }
 
+    /**
+     * Xoá dữ liệu cache và token ở remote.
+     */
     override fun logout() {
         authCache.logout()
         authRemote.logout()

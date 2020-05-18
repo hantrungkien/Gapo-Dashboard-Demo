@@ -6,7 +6,7 @@ import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.airbnb.deeplinkdispatch.DeepLink
-import com.kienht.gapo.core.base.BaseActivity
+import com.kienht.gapo.core.base.BaseBindingActivity
 import com.kienht.gapo.core.utils.TAG
 import com.kienht.gapo.post_details.adapter.CommentAdapter
 import com.kienht.gapo.post_details.databinding.PostDetailsActivityBinding
@@ -17,11 +17,9 @@ import javax.inject.Inject
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 14/05/2020
  */
 @DeepLink("kienht://postdetails/{id}")
-class PostDetailsActivity : BaseActivity<PostDetailsActivityBinding>() {
+class PostDetailsActivity : BaseBindingActivity<PostDetailsActivityBinding>() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory

@@ -4,12 +4,10 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
-import com.kienht.gapo.core.base.BaseFragment
-import com.kienht.gapo.core.utils.TAG
+import com.kienht.gapo.core.base.BaseBindingFragment
 import com.kienht.gapo.dashboard.R
 import com.kienht.gapo.dashboard.databinding.VideosFragmentBinding
 import com.kienht.gapo.dashboard.videos.di.inject
@@ -18,10 +16,8 @@ import javax.inject.Inject
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 15/05/2020
  */
-class VideosFragment : BaseFragment<VideosFragmentBinding>() {
+class VideosFragment : BaseBindingFragment<VideosFragmentBinding>() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -43,26 +39,16 @@ class VideosFragment : BaseFragment<VideosFragmentBinding>() {
             viewModel = videosViewModel
 
             buttonPostDetails.setOnClickListener {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("kienht://postdetails/69"))
-                startActivity(intent)
+                navigateToPostsDetails()
             }
         }
-
-        Log.e(TAG, "onViewCreated")
     }
 
-    override fun onHiddenChanged(hidden: Boolean) {
-        super.onHiddenChanged(hidden)
-        Log.e(TAG, "onHiddenChanged")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.e(TAG, "onStop")
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        Log.e(TAG, "onDestroyView")
+    /**
+     * [com.kienht.gapo.post_details.PostDetailsActivity]
+     */
+    private fun navigateToPostsDetails() {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("kienht://postdetails/69"))
+        startActivity(intent)
     }
 }

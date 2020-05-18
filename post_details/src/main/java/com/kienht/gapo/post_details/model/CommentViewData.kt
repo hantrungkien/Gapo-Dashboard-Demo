@@ -7,8 +7,6 @@ import kotlinx.android.parcel.Parcelize
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 17/05/2020
  */
 class CommentsLiveData(list: List<CommentViewData>) : MutableLiveData<List<CommentViewData>>(list) {
     override fun setValue(value: List<CommentViewData>) {

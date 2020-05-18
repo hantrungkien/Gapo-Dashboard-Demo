@@ -19,8 +19,6 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 15/05/2020
  */
 @Module
 abstract class AuthDataModule {

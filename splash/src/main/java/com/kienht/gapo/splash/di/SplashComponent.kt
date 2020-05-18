@@ -10,8 +10,6 @@ import dagger.android.AndroidInjector
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 15/05/2020
  */
 @FeatureScope
 @Component(

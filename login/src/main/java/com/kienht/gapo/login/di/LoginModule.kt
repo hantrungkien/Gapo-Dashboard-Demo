@@ -15,8 +15,6 @@ import dagger.multibindings.IntoMap
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 15/05/2020
  */
 @Module
 abstract class LoginModule {

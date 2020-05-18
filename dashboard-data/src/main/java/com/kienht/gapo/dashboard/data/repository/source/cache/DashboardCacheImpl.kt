@@ -10,8 +10,6 @@ import javax.inject.Inject
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 14/05/2020
  */
 class DashboardCacheImpl @Inject constructor(
     private val moshi: Moshi,
@@ -32,9 +30,15 @@ class DashboardCacheImpl @Inject constructor(
     private val savedTime: Long
         get() = prefs.getLong(KEY_NEWS_FEEDS_TIME, 0L)
 
+    /**
+     * Kiểm tra thời hạn dữ liệu đã quá 1 giờ hay chưa?
+     */
     private val isStale: Boolean
         get() = System.currentTimeMillis() - savedTime > ONE_HOUR_TIME_MILLIS
 
+    /**
+     * Nếu dữ liệu isStale xẽ xoá dữ liệu và return emptyList()
+     */
     override suspend fun fetchNewsFeeds(): List<NewsFeedDAOModel> {
         if (isStale) {
             prefs.edit {
@@ -52,6 +56,9 @@ class DashboardCacheImpl @Inject constructor(
         }
     }
 
+    /**
+     * Storage dữ liệu đồng thời cũng lưu thời gian dữ liệu được storage.
+     */
     override suspend fun saveNewsFeeds(list: List<NewsFeedDAOModel>) {
         val current = fetchNewsFeeds().toMutableList()
         current.addAll(list)

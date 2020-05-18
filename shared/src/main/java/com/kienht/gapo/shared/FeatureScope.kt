@@ -5,8 +5,6 @@ import kotlin.annotation.AnnotationRetention.RUNTIME
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 14/05/2020
  */
 @Scope
 @Retention(RUNTIME)

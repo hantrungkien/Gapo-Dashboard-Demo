@@ -7,8 +7,6 @@ import kotlinx.android.parcel.Parcelize
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 16/05/2020
  */
 @Parcelize
 data class FriendRequestViewData(

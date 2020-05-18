@@ -8,25 +8,7 @@ import kotlinx.android.parcel.Parcelize
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 16/05/2020
  */
-
-class NewsFeedsLiveData(posts: List<NewsFeedViewData>) :
-    MutableLiveData<List<NewsFeedViewData>>(posts) {
-
-    override fun setValue(value: List<NewsFeedViewData>) {
-        super.setValue(value.copy())
-    }
-
-    override fun postValue(value: List<NewsFeedViewData>) {
-        super.postValue(value.copy())
-    }
-
-    private fun List<NewsFeedViewData>.copy() = this.map { it.copy() }
-
-}
-
 @Parcelize
 data class NewsFeedViewData(
     val id: Long,
@@ -44,6 +26,9 @@ data class NewsFeedViewData(
             return oldItem.id == newItem.id
         }
 
+        /**
+         * Cần triển khai chi tiết cho trường hợp dữ liệu được CRUD.
+         */
         override fun areContentsTheSame(
             oldItem: NewsFeedViewData,
             newItem: NewsFeedViewData

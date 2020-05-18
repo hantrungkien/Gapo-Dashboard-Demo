@@ -8,8 +8,6 @@ import com.kienht.gapo.dashboard.news_feeds.adapter.OnClickPostItemListener
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 16/05/2020
  */
 abstract class NewsFeedBaseViewHolder<T>(
     private val binding: ViewDataBinding,

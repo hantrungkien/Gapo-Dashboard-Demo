@@ -9,8 +9,6 @@ import com.kienht.gapo.core.di.module.ConstantsModule
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 14/05/2020
  */
 class GapoApplication : CoreApplication() {
 

@@ -17,8 +17,6 @@ import com.kienht.gapo.dashboard.news_feeds.model.PostViewData
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 16/05/2020
  */
 class PostVideoViewHolder(
     private val binding: NewsFeedsPostVideoItemBinding,

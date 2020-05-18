@@ -6,8 +6,6 @@ import com.squareup.moshi.JsonClass
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 14/05/2020
  */
 @JsonClass(generateAdapter = true)
 data class NewsFeedDTOModel(

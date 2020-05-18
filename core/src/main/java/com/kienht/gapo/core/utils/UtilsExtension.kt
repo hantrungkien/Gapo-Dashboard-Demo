@@ -16,8 +16,6 @@ import kotlin.collections.ArrayList
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 12/12/2018
  */
 
 inline val <reified T : Any> T.TAG: String

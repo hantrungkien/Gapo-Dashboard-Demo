@@ -18,8 +18,6 @@ import javax.inject.Singleton
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 19/09/2019
  */
 interface CoreComponentProvider {
     fun provideCoreComponent(): CoreComponent

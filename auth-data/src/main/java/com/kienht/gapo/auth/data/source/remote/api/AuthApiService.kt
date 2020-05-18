@@ -6,8 +6,6 @@ import retrofit2.http.POST
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 15/05/2020
  */
 internal interface AuthApiService {
 

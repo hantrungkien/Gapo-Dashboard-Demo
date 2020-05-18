@@ -17,8 +17,6 @@ import com.kienht.gapo.core.base.GlideApp
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 29/12/2018
  */
 @set:BindingAdapter("isVisible")
 inline var View.isVisible: Boolean?
@@ -40,6 +38,7 @@ fun <T> RecyclerView.setDataBinding(data: List<T>?) {
     (adapter as? ListAdapter<T, *>)?.submitList(data)
 }
 
+@SuppressLint("CheckResult")
 @BindingAdapter(
     value = ["url", "placeHolder", "error", "scaleType", "isCircle"],
     requireAll = false

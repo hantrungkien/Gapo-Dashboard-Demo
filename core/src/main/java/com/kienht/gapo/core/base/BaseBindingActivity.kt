@@ -7,10 +7,8 @@ import androidx.databinding.ViewDataBinding
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 14/05/2020
  */
-abstract class BaseActivity<B : ViewDataBinding> : AppCompatActivity() {
+abstract class BaseBindingActivity<B : ViewDataBinding> : AppCompatActivity() {
 
     abstract val layoutResource: Int
 

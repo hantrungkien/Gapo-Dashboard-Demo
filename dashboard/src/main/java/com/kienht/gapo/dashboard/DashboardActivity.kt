@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.airbnb.deeplinkdispatch.DeepLink
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.kienht.gapo.core.base.BaseActivity
+import com.kienht.gapo.core.base.BaseBindingActivity
 import com.kienht.gapo.dashboard.databinding.DashboardActivityBinding
 import com.kienht.gapo.dashboard.di.inject
 import com.kienht.gapo.dashboard.viewmodel.DashboardViewModel
@@ -20,11 +20,9 @@ import javax.inject.Inject
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 14/05/2020
  */
 @DeepLink("kienht://dashboard")
-class DashboardActivity : BaseActivity<DashboardActivityBinding>(),
+class DashboardActivity : BaseBindingActivity<DashboardActivityBinding>(),
     BottomNavigationView.OnNavigationItemReselectedListener,
     BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -33,8 +31,19 @@ class DashboardActivity : BaseActivity<DashboardActivityBinding>(),
 
     private val dashboardViewModel by viewModels<DashboardViewModel> { viewModelFactory }
 
+    /**
+     * Dùng để lưu các lượt đi qua BottomNavigation Menu Item
+     */
     private val backStack = Stack<Int>()
+
+    /**
+     * Dùng để lưu các Root Fragment
+     */
     private val hostFragments = mutableListOf<DashboardNavHostFragment>()
+
+    /**
+     * Index of each BottomNavigation MenuItem
+     */
     private val indexToRootPage by lazy {
         SparseIntArray()
             .apply {
@@ -55,18 +64,18 @@ class DashboardActivity : BaseActivity<DashboardActivityBinding>(),
     override val layoutResource: Int
         get() = R.layout.dashboard_activity
 
-    private val pager: ViewPager2
+    private val viewPager: ViewPager2
         get() = binding.mainPager
 
     private val bottomNavigation: BottomNavigationView
         get() = binding.bottomNavigation
 
-    private val currentIndex: Int
-        get() = pager.currentItem
+    private val currentIndexOfViewPager: Int
+        get() = viewPager.currentItem
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
-        pager.post {
+        viewPager.post {
             checkDeepLink(intent)
         }
     }
@@ -113,34 +122,46 @@ class DashboardActivity : BaseActivity<DashboardActivityBinding>(),
         if (backStack.empty()) backStack.push(0)
     }
 
+    /**
+     * Kiểm tra xem Stack Fragment hiện tại còn có thể BackPressed hay không?
+     */
     override fun onBackPressed() {
-        val fragment = hostFragments[currentIndex]
+        val fragment = hostFragments[currentIndexOfViewPager]
         val hadNestedFragments = fragment.onBackPressed()
         if (!hadNestedFragments) {
             if (backStack.size > 1) {
                 backStack.pop()
-                pager.setCurrentItem(backStack.peek(), false)
+                viewPager.setCurrentItem(backStack.peek(), false)
             } else super.onBackPressed()
         }
     }
 
+    /**
+     * Nếu Reselected Menu Item sẽ trở về Root Fragment
+     */
     override fun onNavigationItemReselected(item: MenuItem) {
         val position = indexToRootPage.indexOfValue(item.itemId)
         val fragment = hostFragments[position]
         fragment.popToRoot()
     }
 
+    /**
+     * Chuyển đến Root Fragment tương ứng với MenuItem
+     */
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         val position = indexToRootPage.indexOfValue(item.itemId)
-        if (currentIndex != position) setItem(position)
+        if (currentIndexOfViewPager != position) setItem(position)
         return true
     }
 
     private fun setItem(position: Int) {
-        pager.setCurrentItem(position, false)
+        viewPager.setCurrentItem(position, false)
         backStack.push(position)
     }
 
+    /**
+     * Handle DeepLink to Child Fragment in Stack Fragment
+     */
     private fun checkDeepLink(intent: Intent) {
         hostFragments.forEachIndexed { index, fragment ->
             val hasDeepLink = fragment.handleDeepLink(intent)

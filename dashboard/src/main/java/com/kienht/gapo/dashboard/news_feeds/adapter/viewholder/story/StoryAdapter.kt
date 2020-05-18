@@ -12,8 +12,6 @@ import com.kienht.gapo.dashboard.news_feeds.model.StoryViewData
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 16/05/2020
  */
 class StoryAdapter(private val viewLifecycleOwner: LifecycleOwner) :
     ListAdapter<StoryViewData, StoryAdapter.StoryViewHolder>(

@@ -6,8 +6,6 @@ import javax.inject.Inject
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 15/05/2020
  */
 internal class AuthCacheImpl @Inject constructor(
     private val prefs: SharedPreferences
@@ -22,8 +20,14 @@ internal class AuthCacheImpl @Inject constructor(
     private val loggedTime: Long
         get() = prefs.getLong(KEY_LOGGED_TIME, 0L)
 
+    /**
+     * Kiểm tra thời hạn session login đã quá 1 tuần hay chưa?
+     */
     private val isStale: Boolean
         get() = System.currentTimeMillis() - loggedTime > ONE_WEEK_TIME_MILLIS
+
+    override val isLoggedIn: Boolean
+        get() = prefs.getBoolean(KEY_LOGGED, false) && !isStale
 
     override fun setLoggedInUser() {
         prefs.edit {
@@ -31,9 +35,6 @@ internal class AuthCacheImpl @Inject constructor(
             putLong(KEY_LOGGED_TIME, System.currentTimeMillis())
         }
     }
-
-    override val isLoggedIn: Boolean
-        get() = prefs.getBoolean(KEY_LOGGED, false) && !isStale
 
     override fun logout() {
         prefs.edit {

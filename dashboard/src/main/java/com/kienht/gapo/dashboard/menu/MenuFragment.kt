@@ -2,12 +2,10 @@ package com.kienht.gapo.dashboard.menu
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
-import com.kienht.gapo.core.base.BaseFragment
-import com.kienht.gapo.core.utils.TAG
+import com.kienht.gapo.core.base.BaseBindingFragment
 import com.kienht.gapo.dashboard.R
 import com.kienht.gapo.dashboard.databinding.MenuFragmentBinding
 import com.kienht.gapo.dashboard.menu.di.inject
@@ -16,10 +14,8 @@ import javax.inject.Inject
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 15/05/2020
  */
-class MenuFragment : BaseFragment<MenuFragmentBinding>() {
+class MenuFragment : BaseBindingFragment<MenuFragmentBinding>() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -41,21 +37,5 @@ class MenuFragment : BaseFragment<MenuFragmentBinding>() {
             viewModel = menuViewModel
         }
 
-        Log.e(TAG, "onViewCreated")
-    }
-
-    override fun onHiddenChanged(hidden: Boolean) {
-        super.onHiddenChanged(hidden)
-        Log.e(TAG, "onHiddenChanged")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.e(TAG, "onStop")
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        Log.e(TAG, "onDestroyView")
     }
 }

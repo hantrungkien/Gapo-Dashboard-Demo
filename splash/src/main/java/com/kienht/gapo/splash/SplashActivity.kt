@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
-import com.kienht.gapo.core.base.BaseActivity
+import com.kienht.gapo.core.base.BaseBindingActivity
 import com.kienht.gapo.splash.databinding.SplashActivityBinding
 import com.kienht.gapo.splash.di.inject
 import com.kienht.gapo.splash.viewmodel.SplashViewModel
@@ -16,10 +16,11 @@ import javax.inject.Inject
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 15/05/2020
+ * Trong demo, SplashActivity được đặt riêng ở 1 module Android Lib bởi vì:
+ * 1. Demo cấu hình Dagger cho cả 2 kiểu module Android Lib và Dynamic Feature.
+ * 2. Module Lib hữu dụng trong trường hợp phải sử dụng [flavor]Implementation trong gradle nếu app có nhiều [flavors].
  */
-class SplashActivity : BaseActivity<SplashActivityBinding>() {
+class SplashActivity : BaseBindingActivity<SplashActivityBinding>() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -38,9 +39,16 @@ class SplashActivity : BaseActivity<SplashActivityBinding>() {
 
         lifecycleScope.launch {
             delay(2000)
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("kienht://login"))
-            startActivity(intent)
-            finish()
+            navigateToLogin()
         }
+    }
+
+    /**
+     * navigate to [com.kienht.gapo.login.LoginActivity]
+     */
+    private fun navigateToLogin() {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("kienht://login"))
+        startActivity(intent)
+        finish()
     }
 }

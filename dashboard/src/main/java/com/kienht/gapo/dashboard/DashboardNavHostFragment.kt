@@ -11,14 +11,13 @@ import com.kienht.gapo.core.utils.bundleOf
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 16/05/2020
+ * Được sử dụng để làm RootFragment cho từng StackFragment
  */
 class DashboardNavHostFragment private constructor() : Fragment() {
 
     companion object {
-        private const val LAYOUT_ARG = "layout_key"
-        private const val NAV_HOST_ARG = "nav_host_key"
+        private const val LAYOUT_ARG = "LAYOUT_ARG"
+        private const val NAV_HOST_ARG = "NAV_HOST_ARG"
 
         fun newInstance(layoutRes: Int, navHostId: Int) =
             DashboardNavHostFragment().apply {
@@ -48,10 +47,16 @@ class DashboardNavHostFragment private constructor() : Fragment() {
         return navController.popBackStack(navController.graph.startDestination, false)
     }
 
+    /**
+     * Kiểm tra xem Stack Fragment hiện tại còn có thể BackPressed hay không?
+     */
     fun onBackPressed(): Boolean = requireActivity()
         .findNavController(navHostId)
         .navigateUp()
 
+    /**
+     * Handle DeepLink to Child Fragment in Stack Fragment
+     */
     fun handleDeepLink(intent: Intent) =
         requireActivity().findNavController(navHostId).handleDeepLink(intent)
 

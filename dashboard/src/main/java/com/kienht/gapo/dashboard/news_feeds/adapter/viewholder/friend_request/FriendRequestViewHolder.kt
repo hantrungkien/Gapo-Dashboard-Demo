@@ -10,8 +10,6 @@ import com.kienht.gapo.dashboard.news_feeds.model.FriendRequestViewData
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 16/05/2020
  */
 class FriendRequestViewHolder(
     binding: NewsFeedsFriendRequestsItemBinding,

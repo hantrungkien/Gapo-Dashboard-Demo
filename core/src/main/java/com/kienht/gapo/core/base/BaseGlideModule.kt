@@ -8,8 +8,6 @@ import com.bumptech.glide.module.AppGlideModule
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 10/10/2019
  */
 @GlideModule
 class BaseGlideModule : AppGlideModule() {

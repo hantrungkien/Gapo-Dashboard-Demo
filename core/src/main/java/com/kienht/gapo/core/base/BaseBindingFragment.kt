@@ -11,10 +11,8 @@ import com.kienht.gapo.core.utils.inflateViewDataBinding
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 12/12/2018
  */
-abstract class BaseFragment<B : ViewDataBinding> : Fragment() {
+abstract class BaseBindingFragment<B : ViewDataBinding> : Fragment() {
 
     abstract val layoutResource: Int
 

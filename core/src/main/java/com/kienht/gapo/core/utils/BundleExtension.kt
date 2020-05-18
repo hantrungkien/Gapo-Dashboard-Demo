@@ -12,8 +12,6 @@ import java.io.Serializable
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 13/09/2019
  */
 fun bundleOf(vararg pairs: Pair<String, Any?>) = Bundle(pairs.size).apply {
     for ((key, value) in pairs) {

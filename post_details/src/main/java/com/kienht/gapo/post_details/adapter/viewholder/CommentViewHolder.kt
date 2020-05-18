@@ -7,8 +7,6 @@ import com.kienht.gapo.post_details.model.CommentViewData
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 17/05/2020
  */
 class CommentViewHolder(
     private val binding: PostCommentItemBinding,

@@ -11,8 +11,6 @@ import javax.inject.Inject
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 15/05/2020
  */
 class NewsFeedsViewModel @Inject constructor(
     fetchNewsFeedsListUseCase: FetchNewsFeedsListUseCase,
@@ -21,6 +19,10 @@ class NewsFeedsViewModel @Inject constructor(
 
     val myAvatarUrl: String = "https://i.ibb.co/frD0Thn/avatar-kienht.jpg"
 
+    /**
+     * Map từ Coroutines Flow sang LiveData để binding vào RecyclerView.
+     * Nhận dữ liệu từ các DataSoutce và tự động cập nhật dữ liệu lên UI.
+     */
     val newsFeedsLiveData: LiveData<List<NewsFeedViewData>> = fetchNewsFeedsListUseCase()
         .filter { it.isNotEmpty() }
         .map { it.mapToViewData() }

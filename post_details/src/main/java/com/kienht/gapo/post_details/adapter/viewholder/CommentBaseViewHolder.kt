@@ -7,8 +7,6 @@ import com.kienht.gapo.post_details.BR
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 16/05/2020
  */
 abstract class CommentBaseViewHolder<T>(
     private val binding: ViewDataBinding,

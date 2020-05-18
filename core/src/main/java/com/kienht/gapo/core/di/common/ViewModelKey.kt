@@ -6,9 +6,8 @@ import kotlin.reflect.KClass
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 17/04/2020
  */
+
 @MapKey
 @MustBeDocumented
 @Target(AnnotationTarget.FUNCTION)

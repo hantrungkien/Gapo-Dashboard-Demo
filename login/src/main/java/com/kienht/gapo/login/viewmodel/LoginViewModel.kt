@@ -15,8 +15,6 @@ import javax.inject.Inject
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 15/05/2020
  */
 class LoginViewModel @Inject constructor(
     private val loginUseCase: LoginUseCase,
@@ -33,6 +31,9 @@ class LoginViewModel @Inject constructor(
         get() = _loginStateLiveData
     private val _loginStateLiveData = MutableLiveData<DataState<*>>()
 
+    /**
+     * Kiểm tra xem đã login hay chưa?
+     */
     init {
         if (loginUseCase.isLoggedIn) {
             _loginStateLiveData.value = DataState.COMPLETE

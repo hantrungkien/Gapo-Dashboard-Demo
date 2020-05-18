@@ -5,8 +5,6 @@ import kotlinx.coroutines.flow.Flow
 
 /**
  * @author kienht
- * @company OICSoft
- * @since 14/05/2020
  */
 interface DashboardRepository {
 
