@@ -35,6 +35,17 @@ android {
             suppressWarnings = true
         }
     }
+
+    dexOptions {
+        preDexLibraries = true
+        javaMaxHeapSize "4g"
+    }
+
+    lintOptions {
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+    }
 }
 
 kapt {
