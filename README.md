@@ -2,6 +2,8 @@
 
 An app which attempts to use the latest cutting edge libraries and tools.
 
+[Demo App download](https://dply.me/nkdiu2)
+
 ![gapo-demo](https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/gapo_demo.png?raw=true)
 
 ![architecture](https://github.com/hantrungkien/Gapo-Dashboard-Demo/blob/master/images/architecture.png?raw=true)
