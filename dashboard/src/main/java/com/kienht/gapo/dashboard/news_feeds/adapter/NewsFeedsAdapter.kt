@@ -9,12 +9,12 @@ import com.kienht.gapo.core.utils.inflateViewDataBinding
 import com.kienht.gapo.dashboard.R
 import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeeds
 import com.kienht.gapo.dashboard.domain.usecase.news.model.Post
-import com.kienht.gapo.dashboard.news_feeds.adapter.viewholder.post_text.PostTextViewHolder
 import com.kienht.gapo.dashboard.news_feeds.adapter.viewholder.NewsFeedBaseViewHolder
+import com.kienht.gapo.dashboard.news_feeds.adapter.viewholder.friend_request.FriendRequestViewHolder
 import com.kienht.gapo.dashboard.news_feeds.adapter.viewholder.post_image.PostImageViewHolder
+import com.kienht.gapo.dashboard.news_feeds.adapter.viewholder.post_text.PostTextViewHolder
 import com.kienht.gapo.dashboard.news_feeds.adapter.viewholder.post_video.PostVideoViewHolder
 import com.kienht.gapo.dashboard.news_feeds.adapter.viewholder.story.StoriesViewHolder
-import com.kienht.gapo.dashboard.news_feeds.adapter.viewholder.friend_request.FriendRequestViewHolder
 import com.kienht.gapo.dashboard.news_feeds.model.NewsFeedViewData
 
 /**

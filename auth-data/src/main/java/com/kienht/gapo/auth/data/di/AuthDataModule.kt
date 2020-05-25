@@ -6,7 +6,6 @@ import com.kienht.gapo.auth.data.source.cache.AuthCacheImpl
 import com.kienht.gapo.auth.data.source.remote.AuthRemote
 import com.kienht.gapo.auth.data.source.remote.AuthRemoteImpl
 import com.kienht.gapo.auth.data.source.remote.api.AuthApiService
-import com.kienht.gapo.auth.domain.repository.AuthRepository
 import com.kienht.gapo.shared.FeatureScope
 import com.squareup.moshi.Moshi
 import dagger.Binds
@@ -52,5 +51,4 @@ abstract class AuthDataModule {
             .build()
             .create(AuthApiService::class.java)
     }
-
 }

@@ -7,11 +7,11 @@ import androidx.lifecycle.viewModelScope
 import com.kienht.gapo.auth.domain.LoginUseCase
 import com.kienht.gapo.core.common.DataState
 import com.kienht.gapo.shared.qualifier.CoDispatcherIOQualifier
+import javax.inject.Inject
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import javax.inject.Inject
 
 /**
  * @author kienht

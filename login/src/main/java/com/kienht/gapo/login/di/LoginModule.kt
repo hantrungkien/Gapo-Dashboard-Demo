@@ -1,7 +1,6 @@
 package com.kienht.gapo.login.di
 
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.kienht.gapo.core.common.ViewModelFactory

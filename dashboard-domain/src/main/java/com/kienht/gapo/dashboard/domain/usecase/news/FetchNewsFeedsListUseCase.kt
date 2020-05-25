@@ -2,8 +2,8 @@ package com.kienht.gapo.dashboard.domain.usecase.news
 
 import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeeds
 import com.kienht.gapo.dashboard.domain.usecase.news.repository.DashboardRepository
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
+import kotlinx.coroutines.flow.Flow
 
 /**
  * @author kienht

@@ -5,7 +5,7 @@ package com.kienht.gapo.core.utils
 import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
 import android.view.View
-import android.widget.*
+import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView

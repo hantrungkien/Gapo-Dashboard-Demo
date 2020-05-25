@@ -1,4 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: 'dependencies.gradle'
 
 buildscript {
     apply from: rootProject.file("dependencies.gradle")
@@ -11,19 +12,20 @@ buildscript {
     repositories {
         google()
         jcenter()
-
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
     dependencies {
         classpath deps.gradle_plugins.android
         classpath deps.gradle_plugins.kotlin
         classpath deps.gradle_plugins.deploygate
+        classpath "org.jlleitschuh.gradle:ktlint-gradle:9.2.1"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
-
-apply from: 'dependencies.gradle'
 
 allprojects {
     repositories {
@@ -67,6 +69,14 @@ allprojects {
                 }
             }
         }
+    }
+}
+
+subprojects {
+    apply plugin: "org.jlleitschuh.gradle.ktlint"
+
+    ktlint {
+        debug = true
     }
 }
 

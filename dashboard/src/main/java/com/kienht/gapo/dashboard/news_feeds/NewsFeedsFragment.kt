@@ -57,6 +57,5 @@ class NewsFeedsFragment : BaseBindingFragment<NewsFeedsFragmentBinding>(), OnCli
     }
 
     override fun onClickPost(post: NewsFeedViewData, position: Int) {
-
     }
 }

@@ -4,8 +4,8 @@ import com.kienht.gapo.shared.qualifier.ApplicationIdQualifier
 import com.kienht.gapo.shared.qualifier.DebugModeQualifier
 import dagger.Module
 import dagger.Provides
-import org.jetbrains.annotations.NotNull
 import javax.inject.Singleton
+import org.jetbrains.annotations.NotNull
 
 /**
  * @author kienht

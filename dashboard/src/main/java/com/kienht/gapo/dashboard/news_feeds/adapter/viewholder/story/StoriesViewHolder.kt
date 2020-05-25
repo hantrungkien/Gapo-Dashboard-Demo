@@ -29,5 +29,4 @@ class StoriesViewHolder(
             adapter = StoryAdapter(lifecycleOwner)
         }
     }
-
 }

@@ -11,9 +11,9 @@ import com.kienht.gapo.core.base.BaseBindingActivity
 import com.kienht.gapo.splash.databinding.SplashActivityBinding
 import com.kienht.gapo.splash.di.inject
 import com.kienht.gapo.splash.viewmodel.SplashViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 /**
  * @author kienht

@@ -6,5 +6,4 @@ import javax.inject.Inject
 /**
  * @author kienht
  */
-class VideosViewModel @Inject constructor() : ViewModel() {
-}
+class VideosViewModel @Inject constructor() : ViewModel()

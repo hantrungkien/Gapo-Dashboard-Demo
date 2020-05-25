@@ -69,5 +69,4 @@ class CommentAdapter(
         super.onViewRecycled(holder)
         (holder as? CommentBaseViewHolder<*>)?.onViewRecycled()
     }
-
 }

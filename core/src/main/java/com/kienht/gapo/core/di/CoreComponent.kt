@@ -6,15 +6,21 @@ import androidx.fragment.app.Fragment
 import com.kienht.gapo.core.di.module.ConstantsModule
 import com.kienht.gapo.core.di.module.CoreModule
 import com.kienht.gapo.core.di.module.ExecutorModule
-import com.kienht.gapo.shared.qualifier.*
+import com.kienht.gapo.shared.qualifier.CoDispatcherDefaultQualifier
+import com.kienht.gapo.shared.qualifier.CoDispatcherIOQualifier
+import com.kienht.gapo.shared.qualifier.CoDispatcherMainQualifier
+import com.kienht.gapo.shared.qualifier.DebugModeQualifier
+import com.kienht.gapo.shared.qualifier.RxSchedulerComputation
+import com.kienht.gapo.shared.qualifier.RxSchedulerIO
+import com.kienht.gapo.shared.qualifier.RxSchedulerMain
 import com.squareup.moshi.Moshi
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
 import io.reactivex.Scheduler
+import javax.inject.Singleton
 import kotlinx.coroutines.CoroutineDispatcher
 import okhttp3.OkHttpClient
-import javax.inject.Singleton
 
 /**
  * @author kienht
@@ -69,6 +75,4 @@ interface CoreComponent : AndroidInjector<CoreApplication> {
 
     @CoDispatcherMainQualifier
     fun provideDispatcherMain(): CoroutineDispatcher
-
-
 }

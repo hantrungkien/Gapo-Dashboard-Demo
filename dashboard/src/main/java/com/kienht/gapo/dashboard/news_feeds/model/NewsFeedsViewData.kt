@@ -1,7 +1,6 @@
 package com.kienht.gapo.dashboard.news_feeds.model
 
 import android.os.Parcelable
-import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.DiffUtil
 import com.kienht.gapo.dashboard.domain.usecase.news.model.NewsFeeds
 import kotlinx.android.parcel.Parcelize

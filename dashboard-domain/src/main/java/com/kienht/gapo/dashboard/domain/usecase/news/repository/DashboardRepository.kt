@@ -9,5 +9,4 @@ import kotlinx.coroutines.flow.Flow
 interface DashboardRepository {
 
     fun newsFeedsFlow(): Flow<List<NewsFeeds>>
-
 }

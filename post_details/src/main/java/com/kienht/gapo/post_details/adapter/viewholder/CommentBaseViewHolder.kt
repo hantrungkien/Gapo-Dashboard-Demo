@@ -31,7 +31,6 @@ abstract class CommentBaseViewHolder<T>(
     }
 
     open fun onViewAttachedToWindow() {
-
     }
 
     open fun onViewDetachedFromWindow() {

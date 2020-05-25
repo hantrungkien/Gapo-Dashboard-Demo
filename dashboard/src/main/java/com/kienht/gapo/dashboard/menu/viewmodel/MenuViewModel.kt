@@ -6,5 +6,4 @@ import javax.inject.Inject
 /**
  * @author kienht
  */
-class MenuViewModel @Inject constructor() : ViewModel() {
-}
+class MenuViewModel @Inject constructor() : ViewModel()

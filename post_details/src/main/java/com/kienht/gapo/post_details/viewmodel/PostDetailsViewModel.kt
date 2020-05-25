@@ -226,5 +226,4 @@ class PostDetailsViewModel @Inject constructor() : ViewModel() {
     val commentsLiveData: LiveData<List<CommentViewData>>
         get() = _commentsLiveData
     private val _commentsLiveData = CommentsLiveData(comments)
-
 }

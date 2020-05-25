@@ -8,9 +8,9 @@ import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import javax.inject.Singleton
 
 /**
  * @author kienht
@@ -48,5 +48,4 @@ abstract class CoreModule {
                 }
             }
     }
-
 }

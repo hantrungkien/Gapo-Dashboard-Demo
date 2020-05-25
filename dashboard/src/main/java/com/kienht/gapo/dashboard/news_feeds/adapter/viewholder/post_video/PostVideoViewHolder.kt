@@ -92,5 +92,4 @@ class PostVideoViewHolder(
         }
         return offset
     }
-
 }

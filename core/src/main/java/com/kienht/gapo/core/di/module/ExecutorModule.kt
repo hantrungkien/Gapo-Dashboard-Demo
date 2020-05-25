@@ -1,14 +1,19 @@
 package com.kienht.gapo.core.di.module
 
-import com.kienht.gapo.shared.qualifier.*
+import com.kienht.gapo.shared.qualifier.CoDispatcherDefaultQualifier
+import com.kienht.gapo.shared.qualifier.CoDispatcherIOQualifier
+import com.kienht.gapo.shared.qualifier.CoDispatcherMainQualifier
+import com.kienht.gapo.shared.qualifier.RxSchedulerComputation
+import com.kienht.gapo.shared.qualifier.RxSchedulerIO
+import com.kienht.gapo.shared.qualifier.RxSchedulerMain
 import dagger.Module
 import dagger.Provides
 import io.reactivex.Scheduler
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Singleton
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
-import javax.inject.Singleton
 
 /**
  * @author kienht
@@ -45,5 +50,4 @@ class ExecutorModule {
     @Singleton
     @CoDispatcherMainQualifier
     internal fun provideDispatcherMain(): CoroutineDispatcher = Dispatchers.Main
-
 }

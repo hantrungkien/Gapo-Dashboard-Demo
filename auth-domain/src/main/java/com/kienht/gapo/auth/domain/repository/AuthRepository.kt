@@ -10,5 +10,4 @@ interface AuthRepository {
     suspend fun login(phone: String)
 
     fun logout()
-
 }

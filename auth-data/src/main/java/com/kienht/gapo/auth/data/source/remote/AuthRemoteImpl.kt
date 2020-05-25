@@ -40,5 +40,3 @@ internal class AuthRemoteImpl @Inject constructor(
         token = null
     }
 }
-
-

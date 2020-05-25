@@ -59,5 +59,4 @@ class DashboardNavHostFragment private constructor() : Fragment() {
      */
     fun handleDeepLink(intent: Intent) =
         requireActivity().findNavController(navHostId).handleDeepLink(intent)
-
 }

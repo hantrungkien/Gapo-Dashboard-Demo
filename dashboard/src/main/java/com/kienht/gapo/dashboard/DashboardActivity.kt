@@ -6,8 +6,8 @@ import android.util.SparseIntArray
 import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
-import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.lifecycle.ViewModelProvider
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.airbnb.deeplinkdispatch.DeepLink
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -15,7 +15,7 @@ import com.kienht.gapo.core.base.BaseBindingActivity
 import com.kienht.gapo.dashboard.databinding.DashboardActivityBinding
 import com.kienht.gapo.dashboard.di.inject
 import com.kienht.gapo.dashboard.viewmodel.DashboardViewModel
-import java.util.*
+import java.util.Stack
 import javax.inject.Inject
 
 /**

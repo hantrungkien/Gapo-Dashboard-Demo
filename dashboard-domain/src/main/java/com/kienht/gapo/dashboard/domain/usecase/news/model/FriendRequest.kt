@@ -1,6 +1,5 @@
 package com.kienht.gapo.dashboard.domain.usecase.news.model
 
-
 /**
  * @author kienht
  */

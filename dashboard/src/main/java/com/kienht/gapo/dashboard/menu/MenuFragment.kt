@@ -36,6 +36,5 @@ class MenuFragment : BaseBindingFragment<MenuFragmentBinding>() {
         with(binding) {
             viewModel = menuViewModel
         }
-
     }
 }

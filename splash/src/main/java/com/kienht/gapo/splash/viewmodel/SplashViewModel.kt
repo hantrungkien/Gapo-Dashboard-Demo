@@ -6,5 +6,4 @@ import javax.inject.Inject
 /**
  * @author kienht
  */
-internal class SplashViewModel @Inject constructor() : ViewModel() {
-}
+internal class SplashViewModel @Inject constructor() : ViewModel()

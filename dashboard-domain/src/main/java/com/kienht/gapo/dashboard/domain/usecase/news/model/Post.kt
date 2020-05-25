@@ -15,7 +15,7 @@ data class Post(
     val likeCount: String,
     val commentCount: String,
     val shareCount: String
-){
+) {
 
     enum class Type {
 

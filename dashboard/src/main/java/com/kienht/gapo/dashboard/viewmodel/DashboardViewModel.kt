@@ -6,5 +6,4 @@ import javax.inject.Inject
 /**
  * @author kienht
  */
-class DashboardViewModel @Inject constructor() : ViewModel() {
-}
+class DashboardViewModel @Inject constructor() : ViewModel()

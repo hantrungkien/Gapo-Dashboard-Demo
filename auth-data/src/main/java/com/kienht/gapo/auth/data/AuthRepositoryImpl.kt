@@ -3,7 +3,6 @@ package com.kienht.gapo.auth.data
 import com.kienht.gapo.auth.data.source.cache.AuthCache
 import com.kienht.gapo.auth.data.source.remote.AuthRemote
 import com.kienht.gapo.auth.domain.repository.AuthRepository
-import javax.inject.Inject
 
 /**
  * @author kienht
