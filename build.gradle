@@ -5,7 +5,6 @@ buildscript {
     apply from: rootProject.file("dependencies.gradle")
 
     ext {
-        kotlin_version = '1.3.72'
         debuggable_release = false
     }
 
@@ -16,11 +15,13 @@ buildscript {
             url "https://plugins.gradle.org/m2/"
         }
     }
+
     dependencies {
         classpath deps.gradle_plugins.android
         classpath deps.gradle_plugins.kotlin
         classpath deps.gradle_plugins.deploygate
-        classpath "org.jlleitschuh.gradle:ktlint-gradle:9.2.1"
+        classpath deps.gradle_plugins.ktlint
+        classpath deps.gradle_plugins.detekt
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -28,6 +29,9 @@ buildscript {
 }
 
 allprojects {
+    apply plugin: "org.jlleitschuh.gradle.ktlint"
+    apply from: "$rootDir/detekt.gradle"
+
     repositories {
         google()
         jcenter()
@@ -73,11 +77,31 @@ allprojects {
 }
 
 subprojects {
-    apply plugin: "org.jlleitschuh.gradle.ktlint"
-
     ktlint {
         debug = true
     }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile) {
+    kotlinOptions {
+        freeCompilerArgs = ["-Xuse-experimental=kotlin.Experimental", "-Xjvm-default=enable"]
+        jvmTarget = "1.8"
+    }
+}
+
+task detektProjectBaseline(type: io.gitlab.arturbosch.detekt.DetektCreateBaselineTask) {
+    description = "Overrides current baseline."
+    ignoreFailures.set(true)
+    parallel.set(true)
+    buildUponDefaultConfig.set(true)
+    setSource(files(
+            "$rootDir/src/main",
+            "$rootDir/src/test"
+    ))
+    config.setFrom(files(detekt_config))
+    baseline.set(file(detekt_baseline_config))
+    include("**/*.kt")
+    include("**/*.kts")
 }
 
 task clean(type: Delete) {

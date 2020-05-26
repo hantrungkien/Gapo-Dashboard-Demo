@@ -1,0 +1,18 @@
+apply plugin: 'io.gitlab.arturbosch.detekt'
+ext.detekt_config = "$rootDir/config/detekt/detekt.yml"
+ext.detekt_baseline_config = "$rootDir/config/detekt/detekt_baseline.yml"
+
+detekt {
+    failFast = true
+    buildUponDefaultConfig = true
+    autoCorrect = true
+    parallel = true
+    config = files(detekt_config)
+//    baseline = file(detekt_baseline_config)
+
+    reports {
+        txt.enabled = true
+        html.enabled = false
+        xml.enabled = false
+    }
+}

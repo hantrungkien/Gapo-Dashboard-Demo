@@ -74,7 +74,9 @@ ext.deps = [
                 googleServices     : "com.google.gms:google-services:4.3.3",
                 deploygate         : "com.deploygate:gradle:2.1.0",
                 firebaseCrashlytics: "com.google.firebase:firebase-crashlytics-gradle:2.1.0",
-                navigationArgs     : "androidx.navigation:navigation-safe-args-gradle-plugin:${versions.navigation}"
+                navigationArgs     : "androidx.navigation:navigation-safe-args-gradle-plugin:${versions.navigation}",
+                ktlint             : "org.jlleitschuh.gradle:ktlint-gradle:9.2.1",
+                detekt             : "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.9.1",
         ],
         kotlin           : [
                 stdlibJdk7: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}",
