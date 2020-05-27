@@ -52,7 +52,7 @@ class LoginActivity : BaseBindingActivity<LoginActivityBinding>() {
                     is DataState.COMPLETE -> {
                         navigateDashboard()
                         createNotification() // test case 1
-//                        createNotification2() // test case 2
+                        createNotification2() // test case 2
                     }
                     is DataState.ERROR -> {
                         Log.e(TAG, "loginError: ", it.throwable)
@@ -98,7 +98,7 @@ class LoginActivity : BaseBindingActivity<LoginActivityBinding>() {
             .setSmallIcon(R.drawable.authentication_image)
             .setContentTitle("Login Success")
             .setContentText("Open Dashboard Screen")
-            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
 
@@ -141,12 +141,12 @@ class LoginActivity : BaseBindingActivity<LoginActivityBinding>() {
             .setSmallIcon(R.drawable.authentication_image)
             .setContentTitle("Login Success")
             .setContentText("Open Post Detail Screen")
-            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(resultPendingIntent)
             .setAutoCancel(true)
 
         with(NotificationManagerCompat.from(this@LoginActivity)) {
-            notify(0, builder.build())
+            notify(1, builder.build())
         }
     }
 }
