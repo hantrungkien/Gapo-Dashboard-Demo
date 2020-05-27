@@ -11,6 +11,29 @@
         android:label="videos_fragment"
         tools:layout="@layout/videos_fragment">
 
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="vit://test"
+            android:autoVerify="true"/>
+
+        <action
+            android:id="@+id/action_videos_to_video_detail"
+            app:destination="@id/video_detail"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/video_detail"
+        android:name="com.kienht.gapo.dashboard.menu.MenuFragment"
+        android:label="video_fragment"
+        tools:layout="@layout/menu_fragment">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="vit://test/{videoId}"
+            android:autoVerify="true"/>
+        <argument
+            android:name="videoId"
+            app:argType="string"/>
     </fragment>
 
 </navigation>
