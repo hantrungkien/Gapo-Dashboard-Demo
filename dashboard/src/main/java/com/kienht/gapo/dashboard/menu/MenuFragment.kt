@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kienht.gapo.core.base.BaseBindingFragment
 import com.kienht.gapo.dashboard.R
 import com.kienht.gapo.dashboard.databinding.MenuFragmentBinding
+import com.kienht.gapo.dashboard.menu.adapter.loadmore.EndlessRecyclerViewScrollListener
 import com.kienht.gapo.dashboard.menu.adapter.loadmore.LoadmoreAdapter
 import com.kienht.gapo.dashboard.menu.adapter.notification.NotificationAdapter
 import com.kienht.gapo.dashboard.menu.di.inject
@@ -43,6 +44,7 @@ class MenuFragment : BaseBindingFragment<MenuFragmentBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         with(binding) {
             viewModel = menuViewModel
 
@@ -50,18 +52,10 @@ class MenuFragment : BaseBindingFragment<MenuFragmentBinding>() {
                 adapter = mergeAdapter
                 layoutManager = LinearLayoutManager(context)
 
-                addOnScrollListener(object : RecyclerView.OnScrollListener() {
-                    override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                        super.onScrollStateChanged(recyclerView, newState)
-                        if (!canScrollVertically(1) && newState == RecyclerView.SCROLL_STATE_IDLE) {
-                            loadmoreAdapter.loading = true
-                            postDelayed(
-                                {
-                                    loadmoreAdapter.loading = false
-                                },
-                                3000
-                            )
-                        }
+                addOnScrollListener(object : EndlessRecyclerViewScrollListener(layoutManager as LinearLayoutManager) {
+                    override fun onLoadMore(page: Int, totalItemsCount: Int, view: RecyclerView?) {
+                        loadmoreAdapter.loading = true
+                        menuViewModel.loadmore()
                     }
                 })
             }
@@ -71,8 +65,11 @@ class MenuFragment : BaseBindingFragment<MenuFragmentBinding>() {
     }
 
     private fun onViewModel() {
+        menuViewModel.fetchNotification()
+
         menuViewModel.newsFeedsLiveData.observe(viewLifecycleOwner, Observer {
             notificationAdapter.submitList(it[0].stories)
+            loadmoreAdapter.loading = false
         })
     }
 }
