@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="androidx.core.content.ContextCompat" />
+
+        <import type="android.widget.ImageView.ScaleType" />
+
+        <variable
+            name="item"
+            type="com.kienht.gapo.dashboard.news_feeds.model.StoryViewData" />
+
+        <variable
+            name="adapterPosition"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingStart="@dimen/_15dp"
+        android:paddingEnd="@dimen/_15dp"
+        android:paddingTop="@dimen/_10dp"
+        android:paddingBottom="@dimen/_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_avatar"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_gravity="center"
+            app:isCircle="@{true}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeHolder="@{ContextCompat.getDrawable(context,com.kienht.gapo.core.R.drawable.ic_account_circle_gray_chateau_100dp)}"
+            app:url="@{item.userAvatar}"
+            tools:src="@drawable/ic_account_circle_gray_chateau_100dp" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_marginBottom="@dimen/_7dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{@string/notification_text(item.username)}"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintStart_toEndOf="@id/image_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_avatar"
+            tools:text="KienHT" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_marginBottom="@dimen/_7dp"
+            android:alpha="0.6"
+            android:text="1 giờ trước"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="@id/text_title"
+            app:layout_constraintTop_toBottomOf="@id/text_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
