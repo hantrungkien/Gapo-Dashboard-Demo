@@ -20,7 +20,10 @@
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+            <!-- This is added to handle a deep link -->
+            <nav-graph android:value="@navigation/videos_graph" />
+        </activity>
     </application>
 </manifest>
 
